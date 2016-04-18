@@ -1,3 +1,45 @@
+body{
+	background-color: black;
+	color: white;
+}
+
+/*===============
+	NAVBAR
+=================*/
+.text-color{
+	color: white;
+}
+
+.margin{
+	margin-left: 5px;
+}
+.nav-buttons{
+	border: none;
+	background-color: black;
+	height: 20px;
+	width: 33%;
+	text-align: center;
+	transition: background-color .5s, color .5s;
+	-moz-transition: background-color .5s, color .5s;
+	-webkit-transition: background-color .5s, color .5s;
+}
+.nav-buttons:hover{
+	background-color: white;
+	color: black;
+}
+.right-border{
+	border-right: 1px solid white;
+}
+#nav ul{
+	padding: 0;
+}
+#nav li{
+	display: inline;
+}
+
+/*=================
+	BODY
+================*/
 .me{
 	border: solid 1px white;
 	border-radius: 5px;
@@ -6,17 +48,20 @@
 	height: 200px;
 	margin-bottom: 5px;
 }
+.center{
+	margin: auto;
+}
+.center-text{
+	text-align: center;
+}
 .importantInfo{
+	display: block;
 	background-color: black;
 	width: 200px;
-	float: left;
-	margin: 0px 10px 10px 0px;
 }
 
-body{
-	background-color: black;
-	color: white;
-}
+
+
 #git{
 	width: 50px;
 	height: 50px;
@@ -46,23 +91,7 @@ body{
 .about-me{
 	padding: 20px 0px 20px;
 }
-.about-me-buttons{
-	color: white;
-	border: none;
-	background-color: black;
-	height: 20px;
-	width: 33%;
-	text-align: center;
-	border-left: 1px solid white;
-}
 
-ul{
-	padding: 0;
-}
-li{
-	
-	display: inline;
-}
 .skillBox{
 	float: left;
 	display: inline;
@@ -80,4 +109,7 @@ li{
 .skillBox:hover{
 		border-radius: 100%;
 }
-
+.logoBox{
+	height: 100px;
+	width: 100px;
+}
