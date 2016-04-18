@@ -13,15 +13,21 @@ body{
 .margin{
 	margin-left: 5px;
 }
+
+
 .nav-buttons{
-	border: none;
 	background-color: black;
+	border: none;
 	height: 20px;
 	width: 33%;
 	text-align: center;
 	transition: background-color .5s, color .5s;
 	-moz-transition: background-color .5s, color .5s;
 	-webkit-transition: background-color .5s, color .5s;
+}
+.active-button{
+	background-color: white;
+	color: black;
 }
 .nav-buttons:hover{
 	background-color: white;
