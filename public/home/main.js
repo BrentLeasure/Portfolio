@@ -13,3 +13,7 @@ function NavbarClick(id){
 		document.getElementById("projects").classList.add('active-button');
 	}
 }
+
+function activatePage(id){
+	
+}
