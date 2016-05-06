@@ -15,5 +15,7 @@ function NavbarClick(id){
 }
 
 function activatePage(id){
-	
+	if(id === 'about-me'){
+		
+	}
 }
