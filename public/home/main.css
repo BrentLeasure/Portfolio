@@ -3,6 +3,7 @@ body{
 	color: white;
 }
 
+
 /*===============
 	NAVBAR
 =================*/
@@ -48,6 +49,10 @@ body{
 /*=================
 	BODY
 ================*/
+#content{
+	padding: 10px;
+}
+
 .page{
 	display: none;
 }

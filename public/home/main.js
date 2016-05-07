@@ -1,21 +1,24 @@
+var previousPageID = "";
+var previousButtonID = "";
+
 function NavbarClick(id){
-	if(id === "about-me"){
-		document.getElementById("about-me").classList.add('active-button');
-		document.getElementById('skills').classList.remove('active-button');
-		document.getElementById('projects').classList.remove('active-button');
-	}else if(id === "skills"){
-		document.getElementById('about-me').classList.remove('active-button');
-		document.getElementById("skills").classList.add('active-button');
-		document.getElementById('projects').classList.remove('class');
-	}else if(id === "projects"){
-		document.getElementById('about-me').classList.remove('active-button');
-		document.getElementById('skills').classList.remove('active-button');
-		document.getElementById("projects").classList.add('active-button');
+	if(previousButtonID == ""){
+		document.getElementById(id).classList.add("active-button");
+		document.getElementById("about-me").classList.remove("active-button");
+	}else{
+		document.getElementById(id).classList.add("active-button");
+		document.getElementById(previousButtonID).classList.remove("active-button");
 	}
+	previousButtonID = id;
 }
 
-function activatePage(id){
-	if(id === 'about-me'){
-		
+function ActivatePage(id){
+	if(previousPageID == ""){
+		document.getElementById(id).classList.add("active");
+		document.getElementById("pageOne").classList.remove("active");
+	}else{
+		document.getElementById(id).classList.add("active");
+		document.getElementById(previousPageID).classList.remove("active");
 	}
+	previousPageID = id;
 }
