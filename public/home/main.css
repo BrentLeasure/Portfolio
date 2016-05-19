@@ -1,6 +1,6 @@
 body{
 	background-color: black;
-	color: white;
+	color: gray;
 }
 
 
@@ -8,7 +8,7 @@ body{
 	NAVBAR
 =================*/
 .text-color{
-	color: white;
+	color: gray;
 }
 
 #nav ul{
