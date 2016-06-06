@@ -49,6 +49,9 @@ body{
 /*=================
 	BODY
 ================*/
+.center{
+    margin: auto;
+}
 #content{
 	padding: 50px;
 }
