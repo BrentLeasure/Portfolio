@@ -1,171 +1,24 @@
-body{
-	background-color: black;
-	color: white;
-}
+body {
+  color: white; }
 
+.backgroundColor, body, #nav {
+  background-color: black; }
 
-/*===============
-	NAVBAR
-=================*/
-.text-color{
-	color: white;
-}
+.general-li, #nav ul li {
+  list-style: none;
+  display: inline; }
 
-#nav ul{
-	padding: 0;
-}
-#nav li{
-	display: inline;
-}
-#nav{
-	background-color: black;
-	width: 100%;
-	height: 20px;
-	margin: 0;
-	margin-bottom: 50px;
-}
-.nav-buttons{
-	background-color: black;
-	border: none;
-	height: 20px;
-	width: 33.33333333333333%;
-	text-align: center;
-	transition: background-color .5s, color .5s;
-	-moz-transition: background-color .5s, color .5s;
-	-webkit-transition: background-color .5s, color .5s;
-}
-.active-button{
-	background-color: white;
-	color: black;
-}
-.nav-buttons:hover{
-	background-color: white;
-	color: black;
-}
-.right-border{
-	border-right: 1px solid white;
-}
+.buttons, .nav-buttons {
+  border: none;
+  text-align: center; }
 
-/*=================
-	BODY
-================*/
-.center{
-    margin: auto;
-}
-#content{
-	padding: 50px;
-}
+.nav-buttons {
+  height: 20px;
+  width: 33.33333%; }
 
-.page{
-	display: none;
-}
+#nav {
+  width: 100%; }
+  #nav ul {
+    padding: 0; }
 
-.me{
-	border: solid 1px white;
-	border-radius: 5px;
-	float: left;
-	width: 200px;
-	height: 200px;
-	margin-bottom: 5px;
-}
-.center{
-	margin: auto;
-}
-.center-text{
-	text-align: center;
-}
-.importantInfo{
-	display: block;
-	background-color: black;
-	width: 200px;
-}
-
-
-
-#git{
-	width: 50px;
-	height: 50px;
-	margin: 0px 30px 0px 30px;
-	float: left;
-}
-
-#in{
-	width: 50px;
-	height: 50px;
-	margin: 0px;
-}
-.item{
-	height: 600px;
-}
-.aboutMeButton{
-	border: none;
-}
-
-
-
-.about-me{
-	padding: 20px 0px 20px;
-}
-
-.skillBox{
-	float: left;
-	display: inline;
-	border: 1px solid black;
-	border-radius: 5px;
-	height: 100px;
-	width: 100px;
-	margin: 3% 3%;
-	-moz-transition: border-radius .50s;
-	-o-transition: border-radius .50s;
-	-webkit-transition: border-radius .50s;
-	transition: border-radius .50s;
-}
-
-.skillBox:hover{
-		border-radius: 100%;
-}
-.logoBox{
-	height: 100px;
-	width: 100px;
-}
-
-.active{
-	display: block;
-	display: inline;  
-	display: inline-block;
-	animation: fadein .5s;
-}
-
-
-@keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-moz-keyframes fadein { /* Firefox */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-webkit-keyframes fadein { /* Safari and Chrome */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
-}
-@-o-keyframes fadein { /* Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-}
+/*# sourceMappingURL=main.css.map */

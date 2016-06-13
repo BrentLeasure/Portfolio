@@ -1,0 +1,70 @@
+$font-color: white
+
+body
+	@extend .backgroundColor
+	color: $font-color	
+
+.backgroundColor
+	background-color: black
+
+.general-li
+	list-style: none
+	display: inline
+
+//=========	
+//buttons
+//========
+.buttons
+	border: none
+	text-align: center
+
+.nav-buttons
+	@extend .buttons
+	height: 20px
+	width: 33.333333%
+
+//=========
+//Navbar
+//=========
+#nav
+	@extend .backgroundColor
+	width: 100%
+	ul		
+		padding: 0
+
+		li
+			@extend .general-li
+
+
+//==========
+//Mixins
+//==========
+
+=transition($length)
+	transition: $length
+	-moz-transition: $length
+	-webkit-transition: $length
+
+=animation($name, $duration, $iterations)
+	animation: $name
+	animation-iteration-count: $iterations
+	animation-duration: $duration
+
+	-moz-animation: $name
+	-moz-animation-duration: $duration
+	-moz-animation-iteration-count: $iterations
+
+	-webkit-animation: $name
+	-webkit-animation-duration: $duration
+	-webkit-animation-iteration-count: $iterations
+  	
+
+=fadeIn($start-opacity, $finish-opacity)
+	from
+		opacity: $start-opacity
+	to
+		opacity: finish-opacity
+
+=image($height, $width)
+	height: $height
+	width: $width
