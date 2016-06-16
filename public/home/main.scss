@@ -65,20 +65,7 @@ body{
 	text-align: center;
 }
 
-.nav-buttons{
-	@extend .buttons;
-	background-color: $backgroundColor;
-	height: 20px;
-	width: 33.333333%;
-	&:hover{
-		background-color: $fontColor;
-	}
-	&:hover #nav{
-		li{
-			color:$backgroundColor;
-		}
-	}
-}
+
 
 //=========
 //Navbar
@@ -88,10 +75,23 @@ body{
 	width: 100%;
 	ul{		
 		@extend .generalUl;
-	}
-	li{
-		color: $fontColor;
-		@extend .generalLi;
+		.nav-buttons{
+			@extend .buttons;
+			background-color: $backgroundColor;
+			height: 20px;
+			width: 33.333333%;
+			&:hover{
+				background-color: $fontColor;
+			}
+			li{
+				color: $fontColor;
+				@extend .generalLi;
+				
+			}
+			li:hover{
+					color:$backgroundColor;
+			}
+		}
 	}
 }
 

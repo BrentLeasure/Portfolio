@@ -4,31 +4,30 @@ body {
   margin: 0px;
   padding: 0px; }
 
-.generalLi, #nav li {
+.generalLi, #nav ul .nav-buttons li {
   list-style: none; }
 
 .generalUl, #nav ul {
   padding: 0px;
   margin: 0px; }
 
-.buttons, .nav-buttons {
+.buttons, #nav ul .nav-buttons {
   border: none;
   text-align: center; }
-
-.nav-buttons {
-  background-color: black;
-  height: 20px;
-  width: 33.333333%; }
-  .nav-buttons:hover {
-    background-color: white; }
-  .nav-buttons:hover #nav li {
-    color: black; }
 
 #nav {
   background-color: black;
   width: 100%; }
-  #nav li {
-    color: white; }
+  #nav ul .nav-buttons {
+    background-color: black;
+    height: 20px;
+    width: 33.333333%; }
+    #nav ul .nav-buttons:hover {
+      background-color: white; }
+    #nav ul .nav-buttons li {
+      color: white; }
+    #nav ul .nav-buttons li:hover {
+      color: black; }
 
 #me {
   height: 50px;
