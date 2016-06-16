@@ -1,24 +1,37 @@
 body {
-  color: white; }
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px; }
 
-.backgroundColor, body, #nav {
-  background-color: black; }
+.generalLi, #nav li {
+  list-style: none; }
 
-.general-li, #nav ul li {
-  list-style: none;
-  display: inline; }
+.generalUl, #nav ul {
+  padding: 0px;
+  margin: 0px; }
 
 .buttons, .nav-buttons {
   border: none;
   text-align: center; }
 
 .nav-buttons {
+  background-color: black;
   height: 20px;
-  width: 33.33333%; }
+  width: 33.333333%; }
+  .nav-buttons:hover {
+    background-color: white; }
+  .nav-buttons:hover #nav li {
+    color: black; }
 
 #nav {
+  background-color: black;
   width: 100%; }
-  #nav ul {
-    padding: 0; }
+  #nav li {
+    color: white; }
+
+#me {
+  height: 50px;
+  width: 50px; }
 
 /*# sourceMappingURL=main.css.map */

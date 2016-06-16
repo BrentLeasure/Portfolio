@@ -1,0 +1,109 @@
+//======
+//Mixin
+//======
+@mixin transition($length){
+	transition: $length;
+	-moz-transition: $length;
+	-webkit-transition: $length;
+}
+
+@mixin animation($name, $duration, $iterations){
+	animation: $name;
+	animation-iteration-count: $iterations;
+	animation-duration: $duration;
+
+	-moz-animation: $name;
+	-moz-animation-duration: $duration;
+	-moz-animation-iteration-count: $iterations;
+
+	-webkit-animation: $name;
+	-webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: $iterations;
+}  	
+
+@mixin fadeIn($start-opacity, $finish-opacity){
+	from{
+		opacity: $start-opacity;
+	}
+	to{
+		opacity: finish-opacity;
+	}
+}
+
+@mixin heightWidth($width, $height){
+	height: $height;
+	width: $width;
+}
+
+//===================================================
+//Body
+//========
+
+$fontColor: white;
+$backgroundColor: black;
+
+body{
+	background-color: $backgroundColor;
+	color: $fontColor;	
+	margin: 0px;
+	padding: 0px;
+}
+.generalLi{
+	list-style: none;
+}
+
+
+.generalUl{
+	padding: 0px;
+	margin: 0px;
+}
+//=========	
+//buttons
+//========
+.buttons{
+	border: none;
+	text-align: center;
+}
+
+.nav-buttons{
+	@extend .buttons;
+	background-color: $backgroundColor;
+	height: 20px;
+	width: 33.333333%;
+	&:hover{
+		background-color: $fontColor;
+	}
+	&:hover #nav{
+		li{
+			color:$backgroundColor;
+		}
+	}
+}
+
+//=========
+//Navbar
+//=========
+#nav{
+	background-color: $backgroundColor;
+	width: 100%;
+	ul{		
+		@extend .generalUl;
+	}
+	li{
+		color: $fontColor;
+		@extend .generalLi;
+	}
+}
+
+
+//========
+//images
+//========
+#me{
+	@include heightWidth(50px, 50px);
+}
+
+//==========
+//Mixins
+//==========
+
