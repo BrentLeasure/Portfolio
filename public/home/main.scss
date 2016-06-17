@@ -1,6 +1,16 @@
-//======
-//Mixin
-//======
+//===================================================
+//Variables
+//===================================================
+
+$fontColor: white;
+$backgroundColor: black;
+
+
+
+//===================================================
+//Mixins
+//===================================================
+
 @mixin transition($length){
 	transition: $length;
 	-moz-transition: $length;
@@ -35,19 +45,16 @@
 	width: $width;
 }
 
-//===================================================
-//Body
-//========
-
-$fontColor: white;
-$backgroundColor: black;
-
-body{
-	background-color: $backgroundColor;
-	color: $fontColor;	
-	margin: 0px;
-	padding: 0px;
+@mixin center($width){
+	width: $width;
+	margin: 0 auto;
 }
+
+
+//===================================================
+//Extenders
+//===================================================
+
 .generalLi{
 	list-style: none;
 }
@@ -57,6 +64,26 @@ body{
 	padding: 0px;
 	margin: 0px;
 }
+
+
+
+//===================================================
+//Body
+//===================================================
+
+
+
+body{
+	background-color: $backgroundColor;
+	color: $fontColor;	
+	margin: 0px;
+	padding: 0px;
+}
+
+#content{
+	padding: 0px 50px 0px;
+}
+
 //=========	
 //buttons
 //========
@@ -73,8 +100,14 @@ body{
 #nav{
 	background-color: $backgroundColor;
 	width: 100%;
+	margin-bottom: 50px;
+
 	ul{		
 		@extend .generalUl;
+
+		//=============
+		//nav buttons 
+		//=============
 		.nav-buttons{
 			@extend .buttons;
 			background-color: $backgroundColor;
@@ -82,14 +115,24 @@ body{
 			width: 33.333333%;
 			&:hover{
 				background-color: $fontColor;
+				li{
+					color:$backgroundColor;
+				}
 			}
+
 			li{
 				color: $fontColor;
 				@extend .generalLi;
 				
 			}
-			li:hover{
-					color:$backgroundColor;
+		}
+		//=============
+		//active button
+		//=============
+		.active-button{
+			background-color: $fontColor;
+			li{
+				color: $backgroundColor;
 			}
 		}
 	}
@@ -97,13 +140,30 @@ body{
 
 
 //========
-//images
+//page layout
 //========
-#me{
-	@include heightWidth(50px, 50px);
+.page{
+	@include center(700px);
+	display: none;
+}
+.active{
+	display: inline;
 }
 
-//==========
-//Mixins
-//==========
+.general-info{
+	@include center(20%);
+
+	#profile-pic{
+		@include heightWidth(200px, 200px);
+		
+		display: block;
+	}
+	#git{
+		margin: 0px 40px 0px 40px;
+	}
+	.info-links{
+		@include heightWidth(35px, 35px);	
+		margin-top: 10px;
+	}
+}
 
