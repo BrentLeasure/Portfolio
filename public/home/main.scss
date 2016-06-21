@@ -17,28 +17,15 @@ $backgroundColor: black;
 	-webkit-transition: $length;
 }
 
-@mixin animation($name, $duration, $iterations){
-	animation: $name;
-	animation-iteration-count: $iterations;
-	animation-duration: $duration;
-
-	-moz-animation: $name;
-	-moz-animation-duration: $duration;
-	-moz-animation-iteration-count: $iterations;
-
-	-webkit-animation: $name;
-	-webkit-animation-duration: $duration;
-	-webkit-animation-iteration-count: $iterations;
+@mixin animation($animation){
+	animation: $animation;
+	
+	-moz-animation: $animation;
+	
+	-webkit-animation: $animation;
+	
 }  	
 
-@mixin fadeIn($start-opacity, $finish-opacity){
-	from{
-		opacity: $start-opacity;
-	}
-	to{
-		opacity: finish-opacity;
-	}
-}
 
 @mixin heightWidth($width, $height){
 	height: $height;
@@ -50,7 +37,15 @@ $backgroundColor: black;
 	margin: 0 auto;
 }
 
+//===================================================
+//Keyframes
+//===================================================
 
+@keyframes fadeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+	
 //===================================================
 //Extenders
 //===================================================
@@ -64,7 +59,6 @@ $backgroundColor: black;
 	padding: 0px;
 	margin: 0px;
 }
-
 
 
 //===================================================
@@ -119,7 +113,6 @@ body{
 					color:$backgroundColor;
 				}
 			}
-
 			li{
 				color: $fontColor;
 				@extend .generalLi;
@@ -146,24 +139,31 @@ body{
 	@include center(700px);
 	display: none;
 }
+
 .active{
-	display: inline;
+    
+    display: inline-block;
+	@include animation(fadeIn .5s);
 }
 
-.general-info{
-	@include center(20%);
 
-	#profile-pic{
-		@include heightWidth(200px, 200px);
-		
-		display: block;
-	}
-	#git{
-		margin: 0px 40px 0px 40px;
-	}
-	.info-links{
-		@include heightWidth(35px, 35px);	
-		margin-top: 10px;
+
+#pageOne{
+	.general-info{
+		@include center(20%);
+
+		#profile-pic{
+			@include heightWidth(200px, 200px);
+			
+			display: block;
+		}
+		#git{
+			margin: 0px 40px 0px 40px;
+		}
+		.info-links{
+			@include heightWidth(35px, 35px);	
+			margin-top: 10px;
+		}
 	}
 }
 

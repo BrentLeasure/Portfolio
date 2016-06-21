@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .generalLi, #nav ul .nav-buttons li {
   list-style: none; }
 
@@ -43,18 +48,21 @@ body {
   display: none; }
 
 .active {
-  display: inline; }
+  display: inline-block;
+  animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s; }
 
-.general-info {
+#pageOne .general-info {
   width: 20%;
   margin: 0 auto; }
-  .general-info #profile-pic {
+  #pageOne .general-info #profile-pic {
     height: 200px;
     width: 200px;
     display: block; }
-  .general-info #git {
+  #pageOne .general-info #git {
     margin: 0px 40px 0px 40px; }
-  .general-info .info-links {
+  #pageOne .general-info .info-links {
     height: 35px;
     width: 35px;
     margin-top: 10px; }
