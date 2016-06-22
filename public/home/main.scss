@@ -1,13 +1,13 @@
-
 //===================================================
-//variables
+//Variables
 //===================================================
 
 $fontColor: white;
 $backgroundColor: black;
 
+
 //===================================================
-//mixins
+//Mixins
 //===================================================
 
 @mixin transition($length){
@@ -20,16 +20,10 @@ $backgroundColor: black;
 	animation: $animation;
 	-moz-animation: $animation;	
 	-webkit-animation: $animation;
+	-webkit-animation: $animation;
+	
 }  	
 
-@mixin fadeIn($start-opacity, $finish-opacity){
-	from{
-		opacity: $start-opacity;
-	}
-	to{
-		opacity: finish-opacity;
-	}
-}
 
 @mixin heightWidth($width, $height){
 	height: $height;
@@ -52,8 +46,18 @@ $backgroundColor: black;
 		opacity: 1;
 	}
 }
+
 //===================================================
-//extenders
+//Keyframes
+//===================================================
+
+@keyframes fadeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+	
+//===================================================
+//Extenders
 //===================================================
 
 .generalLi{
@@ -77,6 +81,11 @@ body{
 	color: $fontColor;	
 	margin: 0px;
 	padding: 0px, 0px, 0px;
+	padding: 0px;
+}
+
+#content{
+	padding: 0px 50px 0px;
 }
 
 //=========	
@@ -95,6 +104,10 @@ body{
 #nav{
 	background-color: $backgroundColor;
 	width: 100%;
+	ul{		
+		@extend .generalUl;
+		margin-bottom: 50px;
+	}
 	.nav-buttons{
 		@extend .buttons;
 		background-color: $backgroundColor;
@@ -112,23 +125,30 @@ body{
 				color:$backgroundColor;
 		}
 	}
-	ul{		
-		@extend .generalUl;
+
+//=============
+//active button
+//=============
+	.active-button{
+		background-color: $fontColor;
+		li{
+			color: $backgroundColor;
+		}
 	}
 }
 
-
 //========
-//images
+//page layout
 //========
 .pages{
-	display: none;
-	padding: 50px 50px 0px;
+	@include center(100%);
 }
+
 .active{
 	display: inline-block;
 	@include animation(fadeIn .5s);
 }
+
 #pageOne{
 	#mainInfo{
 		@include center(20%);
@@ -150,7 +170,30 @@ body{
 
 
 
-//==========
-//Mixins
-//==========
+.active{
+    
+    display: inline-block;
+	@include animation(fadeIn .5s);
+}
+
+
+
+#pageOne{
+	.general-info{
+		@include center(20%);
+
+		#profile-pic{
+			@include heightWidth(200px, 200px);
+			
+			display: block;
+		}
+		#git{
+			margin: 0px 40px 0px 40px;
+		}
+		.info-links{
+			@include heightWidth(35px, 35px);	
+			margin-top: 10px;
+		}
+	}
+}
 

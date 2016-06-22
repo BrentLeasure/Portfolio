@@ -3,6 +3,11 @@
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .generalLi, #nav .nav-buttons li {
   list-style: none; }
 
@@ -14,7 +19,11 @@ body {
   background-color: black;
   color: white;
   margin: 0px;
-  padding: 0px, 0px, 0px; }
+  padding: 0px, 0px, 0px;
+  padding: 0px; }
+
+#content {
+  padding: 0px 50px 0px; }
 
 .buttons, #nav .nav-buttons {
   border: none;
@@ -23,6 +32,8 @@ body {
 #nav {
   background-color: black;
   width: 100%; }
+  #nav ul {
+    margin-bottom: 50px; }
   #nav .nav-buttons {
     background-color: black;
     height: 20px;
@@ -33,15 +44,20 @@ body {
       color: white; }
     #nav .nav-buttons:hover li {
       color: black; }
+  #nav .active-button {
+    background-color: white; }
+    #nav .active-button li {
+      color: black; }
 
 .pages {
-  display: none;
-  padding: 50px 50px 0px; }
+  width: 100%;
+  margin: 0 auto; }
 
 .active {
   display: inline-block;
   animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s; }
 
 #pageOne #mainInfo {
@@ -58,5 +74,26 @@ body {
   display: inline; }
 #pageOne #git {
   margin: 0px 35px 0px 10px; }
+
+.active {
+  display: inline-block;
+  animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s; }
+
+#pageOne .general-info {
+  width: 20%;
+  margin: 0 auto; }
+  #pageOne .general-info #profile-pic {
+    height: 200px;
+    width: 200px;
+    display: block; }
+  #pageOne .general-info #git {
+    margin: 0px 40px 0px 40px; }
+  #pageOne .general-info .info-links {
+    height: 35px;
+    width: 35px;
+    margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */
