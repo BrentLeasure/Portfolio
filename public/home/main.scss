@@ -25,7 +25,7 @@ $backgroundColor: black;
 }  	
 
 
-@mixin heightWidth($width, $height){
+@mixin heightWidth($height, $width){
 	height: $height;
 	width: $width;
 }
@@ -142,6 +142,7 @@ body{
 //========
 .pages{
 	@include center(100%);
+	display: none;
 }
 
 .active{
@@ -151,21 +152,27 @@ body{
 
 #pageOne{
 	#mainInfo{
-		@include center(20%);
+		@include heightWidth(50px, 200px);	
+		margin: 0 auto;
 	}
 
-	#me{
-		@include heightWidth(150px, 150px);
-		margin-bottom: 10px;
+	#profile-pic{
+		@include heightWidth(200px, 200px);	
+		margin: 0 auto;
 		display: block;
 	}	
 	.git-in{
 		@include heightWidth(35px, 35px);
+		margin: 0 auto;
 		display: inline;
 	}
 	#git{
-		margin: 0px 35px 0px 10px;
+		margin: 0px 55px 0px 30px;
 	}
+}
+
+#pageTwo{
+	
 }
 
 
@@ -176,24 +183,4 @@ body{
 	@include animation(fadeIn .5s);
 }
 
-
-
-#pageOne{
-	.general-info{
-		@include center(20%);
-
-		#profile-pic{
-			@include heightWidth(200px, 200px);
-			
-			display: block;
-		}
-		#git{
-			margin: 0px 40px 0px 40px;
-		}
-		.info-links{
-			@include heightWidth(35px, 35px);	
-			margin-top: 10px;
-		}
-	}
-}
 

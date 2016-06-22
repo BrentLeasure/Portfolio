@@ -51,7 +51,8 @@ body {
 
 .pages {
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: none; }
 
 .active {
   display: inline-block;
@@ -61,19 +62,21 @@ body {
   -webkit-animation: fadeIn 0.5s; }
 
 #pageOne #mainInfo {
-  width: 20%;
+  height: 50px;
+  width: 200px;
   margin: 0 auto; }
-#pageOne #me {
-  height: 150px;
-  width: 150px;
-  margin-bottom: 10px;
+#pageOne #profile-pic {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
   display: block; }
 #pageOne .git-in {
   height: 35px;
   width: 35px;
+  margin: 0 auto;
   display: inline; }
 #pageOne #git {
-  margin: 0px 35px 0px 10px; }
+  margin: 0px 55px 0px 30px; }
 
 .active {
   display: inline-block;
@@ -81,19 +84,5 @@ body {
   -moz-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s; }
-
-#pageOne .general-info {
-  width: 20%;
-  margin: 0 auto; }
-  #pageOne .general-info #profile-pic {
-    height: 200px;
-    width: 200px;
-    display: block; }
-  #pageOne .general-info #git {
-    margin: 0px 40px 0px 40px; }
-  #pageOne .general-info .info-links {
-    height: 35px;
-    width: 35px;
-    margin-top: 10px; }
 
 /*# sourceMappingURL=main.css.map */
