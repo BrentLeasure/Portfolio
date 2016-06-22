@@ -1,37 +1,62 @@
-body {
-  background-color: black;
-  color: white;
-  margin: 0px;
-  padding: 0px; }
-
-.generalLi, #nav li {
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.generalLi, #nav .nav-buttons li {
   list-style: none; }
 
 .generalUl, #nav ul {
   padding: 0px;
   margin: 0px; }
 
-.buttons, .nav-buttons {
+body {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px, 0px, 0px; }
+
+.buttons, #nav .nav-buttons {
   border: none;
   text-align: center; }
-
-.nav-buttons {
-  background-color: black;
-  height: 20px;
-  width: 33.333333%; }
-  .nav-buttons:hover {
-    background-color: white; }
-  .nav-buttons:hover #nav li {
-    color: black; }
 
 #nav {
   background-color: black;
   width: 100%; }
-  #nav li {
-    color: white; }
+  #nav .nav-buttons {
+    background-color: black;
+    height: 20px;
+    width: 33.333333%; }
+    #nav .nav-buttons:hover {
+      background-color: white; }
+    #nav .nav-buttons li {
+      color: white; }
+    #nav .nav-buttons:hover li {
+      color: black; }
 
-#me {
-  height: 50px;
-  width: 50px; }
+.pages {
+  display: none;
+  padding: 50px 50px 0px; }
+
+.active {
+  display: inline-block;
+  animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -webkit-animation: fadeIn 0.5s; }
+
+#pageOne #mainInfo {
+  width: 20%;
+  margin: 0 auto; }
+#pageOne #me {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 10px;
+  display: block; }
+#pageOne .git-in {
+  height: 35px;
+  width: 35px;
+  display: inline; }
+#pageOne #git {
+  margin: 0px 35px 0px 10px; }
 
 /*# sourceMappingURL=main.css.map */

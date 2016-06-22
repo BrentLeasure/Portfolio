@@ -1,24 +1,25 @@
-//======
-//Mixin
-//======
+
+//===================================================
+//variables
+//===================================================
+
+$fontColor: white;
+$backgroundColor: black;
+
+//===================================================
+//mixins
+//===================================================
+
 @mixin transition($length){
 	transition: $length;
 	-moz-transition: $length;
 	-webkit-transition: $length;
 }
 
-@mixin animation($name, $duration, $iterations){
-	animation: $name;
-	animation-iteration-count: $iterations;
-	animation-duration: $duration;
-
-	-moz-animation: $name;
-	-moz-animation-duration: $duration;
-	-moz-animation-iteration-count: $iterations;
-
-	-webkit-animation: $name;
-	-webkit-animation-duration: $duration;
-	-webkit-animation-iteration-count: $iterations;
+@mixin animation($animation){
+	animation: $animation;
+	-moz-animation: $animation;	
+	-webkit-animation: $animation;
 }  	
 
 @mixin fadeIn($start-opacity, $finish-opacity){
@@ -35,19 +36,26 @@
 	width: $width;
 }
 
-//===================================================
-//Body
-//========
-
-$fontColor: white;
-$backgroundColor: black;
-
-body{
-	background-color: $backgroundColor;
-	color: $fontColor;	
-	margin: 0px;
-	padding: 0px;
+@mixin center($width){
+	width: $width;
+	margin: 0 auto;
 }
+
+//===================================================
+//keyframes
+//===================================================
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+//===================================================
+//extenders
+//===================================================
+
 .generalLi{
 	list-style: none;
 }
@@ -57,6 +65,20 @@ body{
 	padding: 0px;
 	margin: 0px;
 }
+
+
+//===================================================
+//Body
+//===================================================
+
+
+body{
+	background-color: $backgroundColor;
+	color: $fontColor;	
+	margin: 0px;
+	padding: 0px, 0px, 0px;
+}
+
 //=========	
 //buttons
 //========
@@ -65,20 +87,7 @@ body{
 	text-align: center;
 }
 
-.nav-buttons{
-	@extend .buttons;
-	background-color: $backgroundColor;
-	height: 20px;
-	width: 33.333333%;
-	&:hover{
-		background-color: $fontColor;
-	}
-	&:hover #nav{
-		li{
-			color:$backgroundColor;
-		}
-	}
-}
+
 
 //=========
 //Navbar
@@ -86,12 +95,25 @@ body{
 #nav{
 	background-color: $backgroundColor;
 	width: 100%;
+	.nav-buttons{
+		@extend .buttons;
+		background-color: $backgroundColor;
+		height: 20px;
+		width: 33.333333%;
+		&:hover{
+			background-color: $fontColor;
+		}
+
+		li{
+			color: $fontColor;
+			@extend .generalLi;
+		}	
+		&:hover li{
+				color:$backgroundColor;
+		}
+	}
 	ul{		
 		@extend .generalUl;
-	}
-	li{
-		color: $fontColor;
-		@extend .generalLi;
 	}
 }
 
@@ -99,9 +121,34 @@ body{
 //========
 //images
 //========
-#me{
-	@include heightWidth(50px, 50px);
+.pages{
+	display: none;
+	padding: 50px 50px 0px;
 }
+.active{
+	display: inline-block;
+	@include animation(fadeIn .5s);
+}
+#pageOne{
+	#mainInfo{
+		@include center(20%);
+	}
+
+	#me{
+		@include heightWidth(150px, 150px);
+		margin-bottom: 10px;
+		display: block;
+	}	
+	.git-in{
+		@include heightWidth(35px, 35px);
+		display: inline;
+	}
+	#git{
+		margin: 0px 35px 0px 10px;
+	}
+}
+
+
 
 //==========
 //Mixins

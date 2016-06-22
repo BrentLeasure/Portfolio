@@ -9,11 +9,11 @@
 	<ul><button onclick="NavbarClick('about-me'); ActivatePage('pageOne');" id="about-me" class="right-border nav-buttons active-button"><li>About Me</li></button><button onclick="NavbarClick('skills'); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons"><li>Skills</li></button><button onclick="NavbarClick('projects'); ActivatePage('pageThree');" id="projects" class="nav-buttons"><li>Projects</li></button></ul>
 </div>
 <div id="content">
-	<div id="pageOne" class="page active">
-		<div class="importantInfo center">
+	<div id="pageOne" class="pages active">
+		<div id="mainInfo">
 			<img id="me" src="/../Me.png">
-			<a target="_blank" href="https://github.com/BrentLeasure"><img id="git" src="/../githubLogo.png"></a>
-			<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img id="in" src="/../linkedInLogo.png"></a>
+			<a target="_blank" href="https://github.com/BrentLeasure"><img class="git-in" id="git" src="/../githubLogo.png"></a>
+			<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img class="git-in" id="in" src="/../linkedInLogo.png"></a>
 		</div><center>
 			<h3>Brent Leasure</h3>
 
@@ -21,7 +21,7 @@
 			<p> Thanks for stopping by and enjoy your stay!</p>
 		</center></div>
 
-	<div id="pageTwo" class="page center">
+	<div id="pageTwo" class="pages">
 			<img class="skillBox" src="../html5.png">
 			<img class="skillBox" src="../css3.png">
 			<img class="skillBox" src="../bootstrap.png">
@@ -33,7 +33,7 @@
 			<img class="skillBox" src="../cucumber.png">
 	</div>
 
-	<div id="pageThree" class="page">
+	<div id="pageThree" class="pages">
 		<h2><u><a class="text-color" target="_blank" href="http://beer-pal.com/#/">Beer-Pal</a></u></h2>
 			<img class="logoBox"src="../LogoWhite.png">
 		<p>A safe haven for craft Brewers. </p>
