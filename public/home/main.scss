@@ -1,7 +1,9 @@
 //===================================================
 //Variables
 //===================================================
-
+$smallScreen: 750px;
+$midScreen: 970px;
+$bigScreen: 1170px;
 $fontColor: white;
 $backgroundColor: black;
 
@@ -10,10 +12,10 @@ $backgroundColor: black;
 //Mixins
 //===================================================
 
-@mixin transition($length){
-	transition: $length;
-	-moz-transition: $length;
-	-webkit-transition: $length;
+@mixin transition($transition){
+	transition: $transition;
+	-moz-transition: $transition;
+	-webkit-transition: $transition;
 }
 
 @mixin animation($animation){
@@ -113,6 +115,7 @@ body{
 		background-color: $backgroundColor;
 		height: 20px;
 		width: 33.333333%;
+		@include transition(background-color .5s);
 		&:hover{
 			background-color: $fontColor;
 		}
@@ -120,9 +123,13 @@ body{
 		li{
 			color: $fontColor;
 			@extend .generalLi;
+			@include transition(background-color .5s);
 		}	
 		&:hover li{
 				color:$backgroundColor;
+		}
+		@media screen and (max-width: $smallScreen){
+			height: 50px;
 		}
 	}
 
@@ -172,15 +179,28 @@ body{
 }
 
 #pageTwo{
-	
+	padding-left: 6%;
+	width: 100%;
+	.skillbox{
+		@include heightWidth(150px, 150px);
+		@include transition(border-radius .5s);
+		border: 5px solid $backgroundColor;
+		margin: 1% 6.5% 1%;
+
+		@media screen and (max-width: $midScreen){
+			margin: 1% 3.5% 1%;
+		}
+		@media screen and (max-width: $smallScreen){
+			@include heightWidth(100px, 100px);
+			margin: 1% 2% 1%;
+		}
+		&:hover{
+			border-radius: 100%;
+		}
+	}
 }
 
 
 
-.active{
-    
-    display: inline-block;
-	@include animation(fadeIn .5s);
-}
 
 
