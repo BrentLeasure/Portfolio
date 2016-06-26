@@ -26,6 +26,11 @@ $backgroundColor: black;
 	
 }  	
 
+@mixin grayscale($grayscale){
+	-webkit-filter: grayscale($grayscale);
+	filter: grayscale($grayscale);
+}
+
 
 @mixin heightWidth($height, $width){
 	height: $height;
@@ -116,10 +121,6 @@ body{
 		height: 20px;
 		width: 33.333333%;
 		@include transition(background-color .5s);
-		&:hover{
-			background-color: $fontColor;
-		}
-
 		li{
 			color: $fontColor;
 			@extend .generalLi;
@@ -130,6 +131,24 @@ body{
 		}
 		@media screen and (max-width: $smallScreen){
 			height: 50px;
+		}
+	}
+	#about-me{
+		@include transition(background-color .5s);
+		&:hover{
+			background-color: #1072b8;
+		}
+	}
+	#skills{
+		@include transition(background-color .5s);
+		&:hover{
+			background-color: #e44d26;
+		}
+	}
+	#projects{
+		@include transition(background-color .5s);
+		&:hover{
+			background-color: #90c53f;
 		}
 	}
 
@@ -165,6 +184,7 @@ body{
 
 	#profile-pic{
 		@include heightWidth(200px, 200px);	
+		@include grayscale(100%);
 		margin: 0 auto;
 		display: block;
 	}	
@@ -184,6 +204,7 @@ body{
 	.skillbox{
 		@include heightWidth(150px, 150px);
 		@include transition(border-radius .5s);
+		@include grayscale(100%);
 		border: 5px solid $backgroundColor;
 		margin: 1% 6.5% 1%;
 
@@ -196,6 +217,7 @@ body{
 		}
 		&:hover{
 			border-radius: 100%;
+			@include grayscale(0%);
 		}
 	}
 }

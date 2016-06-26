@@ -41,8 +41,6 @@ body {
     transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     -webkit-transition: background-color 0.5s; }
-    #nav .nav-buttons:hover {
-      background-color: white; }
     #nav .nav-buttons li {
       color: white;
       transition: background-color 0.5s;
@@ -53,6 +51,24 @@ body {
     @media screen and (max-width: 750px) {
       #nav .nav-buttons {
         height: 50px; } }
+  #nav #about-me {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+    #nav #about-me:hover {
+      background-color: #1072b8; }
+  #nav #skills {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+    #nav #skills:hover {
+      background-color: #e44d26; }
+  #nav #projects {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s; }
+    #nav #projects:hover {
+      background-color: #90c53f; }
   #nav .active-button {
     background-color: white; }
     #nav .active-button li {
@@ -77,6 +93,8 @@ body {
 #pageOne #profile-pic {
   height: 200px;
   width: 200px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
   margin: 0 auto;
   display: block; }
 #pageOne .git-in {
@@ -96,6 +114,8 @@ body {
     transition: border-radius 0.5s;
     -moz-transition: border-radius 0.5s;
     -webkit-transition: border-radius 0.5s;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
     border: 5px solid black;
     margin: 1% 6.5% 1%; }
     @media screen and (max-width: 970px) {
@@ -107,6 +127,8 @@ body {
         width: 100px;
         margin: 1% 2% 1%; } }
     #pageTwo .skillbox:hover {
-      border-radius: 100%; }
+      border-radius: 100%;
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%); }
 
 /*# sourceMappingURL=main.css.map */
