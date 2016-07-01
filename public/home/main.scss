@@ -129,34 +129,34 @@ body{
 		&:hover li{
 				color:$backgroundColor;
 		}
-		@media screen and (max-width: $smallScreen){
+		@media all and (max-width: $smallScreen){
 			height: 50px;
 		}
 	}
 	#about-me{
 		@include transition(background-color .5s);
+		background-color: #1072b8;
 		&:hover{
-			background-color: #1072b8;
+			background-color: #1072b8!important;;
 		}
 	}
 	#skills{
 		@include transition(background-color .5s);
 		&:hover{
-			background-color: #e44d26;
+			background-color: #e44d26!important;;
 		}
 	}
 	#projects{
 		@include transition(background-color .5s);
 		&:hover{
-			background-color: #90c53f;
+			background-color: #90c53f!important;;
 		}
 	}
 
 //=============
 //active button
 //=============
-	.active-button{
-		background-color: $fontColor;
+	.active-button{ 
 		li{
 			color: $backgroundColor;
 		}
@@ -208,13 +208,15 @@ body{
 		border: 5px solid $backgroundColor;
 		margin: 1% 6.5% 1%;
 
-		@media screen and (max-width: $midScreen){
+		@media all and (max-width: $midScreen){
 			margin: 1% 3.5% 1%;
 		}
-		@media screen and (max-width: $smallScreen){
+
+		@media all and (max-width: $smallScreen){
 			@include heightWidth(100px, 100px);
 			margin: 1% 2% 1%;
 		}
+
 		&:hover{
 			border-radius: 100%;
 			@include grayscale(0%);
