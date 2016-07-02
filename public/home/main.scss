@@ -7,6 +7,9 @@ $bigScreen: 1170px;
 $fontColor: white;
 $backgroundColor: black;
 
+$aboutMe: #1072b8;
+$skills: #e44d26;
+$projects: #90c53f;
 
 //===================================================
 //Mixins
@@ -135,21 +138,21 @@ body{
 	}
 	#about-me{
 		@include transition(background-color .5s);
-		background-color: #1072b8;
+		background-color: $aboutMe;
 		&:hover{
-			background-color: #1072b8!important;;
+			background-color: $aboutMe!important;;
 		}
 	}
 	#skills{
 		@include transition(background-color .5s);
 		&:hover{
-			background-color: #e44d26!important;;
+			background-color: $skills!important;;
 		}
 	}
 	#projects{
 		@include transition(background-color .5s);
 		&:hover{
-			background-color: #90c53f!important;;
+			background-color: $projects!important;;
 		}
 	}
 
