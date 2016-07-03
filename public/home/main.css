@@ -5,10 +5,15 @@
   padding: 0px;
   margin: 0px; }
 
-.buttons, #pageOne .nav-buttons {
+.circle-buttons, #content #pageOne .nav-buttons {
   border: 5px solid white;
   border-radius: 100%;
   text-align: center; }
+
+.buttons, #content #home-button {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px; }
 
 @keyframes fadeIn {
   from {
@@ -28,116 +33,129 @@ body {
   padding: 0px; }
 
 #content {
-  padding: 0px 50px 0px; }
-
-.active-button li {
-  color: black; }
-
-.pages {
-  width: 100%;
-  margin: 0 auto;
-  display: none; }
-
-.active {
-  display: inline-block;
   animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
-  -webkit-animation: fadeIn 0.5s; }
-
-#pageOne .nav-buttons {
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -webkit-transition: color 0.5s;
-  height: 125px;
-  width: 125px;
-  position: relative;
-  background-color: black;
-  color: white; }
-  #pageOne .nav-buttons:hover {
+  -webkit-animation: fadeIn 0.5s;
+  padding: 0px 50px 0px; }
+  #content #home-button {
+    margin: 20px 20px 0px;
+    visibility: hidden;
+    background-color: black;
+    color: white; }
+  #content .active-button li {
     color: black; }
-#pageOne #about-me {
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  position: relative;
-  top: 70px;
-  left: 100px; }
-  #pageOne #about-me:hover {
-    background-color: #1072b8 !important; }
-#pageOne #skills {
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  top: 0px;
-  left: 160px;
-  margin-bottom: 30px; }
-  #pageOne #skills:hover {
-    background-color: #e44d26 !important; }
-#pageOne #projects {
-  transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  top: 70px;
-  left: 220px; }
-  #pageOne #projects:hover {
-    background-color: #90c53f !important; }
-#pageOne #fullContent {
-  height: 700px;
-  width: 700px;
-  margin: 0 auto;
-  margin-top: 100px; }
-#pageOne #fullInfo {
-  margin: 0 auto;
-  height: 300px;
-  width: 300px;
-  border: 5px solid white;
-  border-radius: 100%; }
-#pageOne #mainInfo {
-  height: 50px;
-  width: 200px;
-  margin: 0 auto; }
-#pageOne #profile-pic {
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  margin: 0 auto;
-  display: block; }
-#pageOne .git-in {
-  height: 35px;
-  width: 35px;
-  margin: 0 auto;
-  display: inline; }
-#pageOne #git {
-  margin: 0px 55px 0px 30px; }
-
-#pageTwo {
-  padding-left: 6%;
-  width: 100%; }
-  #pageTwo .skillbox {
-    height: 150px;
-    width: 150px;
-    transition: border-radius 0.5s;
-    -moz-transition: border-radius 0.5s;
-    -webkit-transition: border-radius 0.5s;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    border: 5px solid black;
-    margin: 1% 6.5% 1%; }
+  #content .pages {
+    width: 100%;
+    margin: 0 auto;
+    display: none; }
+  #content .active {
+    display: inline-block;
+    animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.5s; }
+  #content .profile-pic {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: block; }
+  #content #pageOne .nav-buttons {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    height: 125px;
+    width: 125px;
+    position: relative;
+    background-color: black;
+    color: white; }
+    #content #pageOne .nav-buttons:hover {
+      color: black; }
+  #content #pageOne #about-me {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    position: relative;
+    top: 70px;
+    left: 100px; }
+    #content #pageOne #about-me:hover {
+      background-color: #1072b8 !important; }
+  #content #pageOne #skills {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    top: 0px;
+    left: 160px;
+    margin-bottom: 30px; }
+    #content #pageOne #skills:hover {
+      background-color: #e44d26 !important; }
+  #content #pageOne #projects {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    top: 70px;
+    left: 220px; }
+    #content #pageOne #projects:hover {
+      background-color: #90c53f !important; }
+  #content #pageOne #fullContent {
+    height: 700px;
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 100px; }
     @media all and (max-width: 970px) {
-      #pageTwo .skillbox {
-        margin: 1% 3.5% 1%; } }
-    @media all and (max-width: 750px) {
-      #pageTwo .skillbox {
-        height: 100px;
-        width: 100px;
-        margin: 1% 2% 1%; } }
-    #pageTwo .skillbox:hover {
-      border-radius: 100%;
-      -webkit-filter: grayscale(0%);
-      filter: grayscale(0%); }
+      #content #pageOne #fullContent {
+        margin-top: 250px; } }
+  #content #pageOne #fullInfo {
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
+    border: 5px solid white;
+    border-radius: 100%; }
+  #content #pageOne #mainInfo {
+    height: 50px;
+    width: 200px;
+    margin: 0 auto; }
+  #content #pageOne .git-in {
+    height: 35px;
+    width: 35px;
+    margin: 0 auto;
+    display: inline; }
+  #content #pageOne #git {
+    margin: 0px 55px 0px 30px; }
+  #content #pageTwo {
+    padding-left: 6%;
+    width: 100%; }
+    #content #pageTwo .skillbox {
+      height: 150px;
+      width: 150px;
+      transition: border-radius 0.5s;
+      -moz-transition: border-radius 0.5s;
+      -webkit-transition: border-radius 0.5s;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      border: 5px solid black;
+      margin: 1% 6.5% 1%; }
+      @media all and (max-width: 970px) {
+        #content #pageTwo .skillbox {
+          margin: 1% 3.5% 1%; } }
+      @media all and (max-width: 750px) {
+        #content #pageTwo .skillbox {
+          height: 100px;
+          width: 100px;
+          margin: 1% 2% 1%; } }
+      #content #pageTwo .skillbox:hover {
+        border-radius: 100%;
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%); }
+  #content #pageFour #me {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
+  @media all and (max-width: 970px) {
+    #content {
+      padding: 0px 0px 0px; } }
 
 /*# sourceMappingURL=main.css.map */

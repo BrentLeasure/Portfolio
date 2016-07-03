@@ -37,150 +37,168 @@ body{
 }
 
 #content{
-	padding: 0px 50px 0px;
-}
-
-
-
-
-
-//=========
-//Navigation
-//=========
-
-//=============
-//active button
-//=============
-.active-button{ 
-	li{
-		color: $backgroundColor;
-	}
-}
-
-
-//========
-//page layout
-//========
-.pages{
-	@include center(100%);
-	display: none;
-}
-
-.active{
-	display: inline-block;
 	@include animation(fadeIn .5s);
-}
+	padding: 0px 50px 0px;
 
-#pageOne{
-	.nav-buttons{
-		@include transition(background-color .5s);
-		@include transition(color .5s);
-		@include heightWidth(125px, 125px);	
+	#home-button{
+		margin: 20px 20px 0px;
 		@extend .buttons;
-		position: relative;
+		visibility: hidden;
 		background-color: $backgroundColor;
 		color: $fontColor;
+	}
 
-		&:hover{
+
+	//=========
+	//Navigation
+	//=========
+
+	//=============
+	//active button
+	//=============
+	.active-button{ 
+		li{
 			color: $backgroundColor;
 		}
 	}
-	#about-me{
-		@include transition(background-color .5s);
-		position: relative;
-		top: 70px;
-		left: 100px;
 
-		&:hover{
-			background-color: $aboutMe!important;;
-		}
+
+	//========
+	//page layout
+	//========
+
+	.pages{
+		@include center(100%);
+		display: none;
 	}
 
-	#skills{
-		@include transition(background-color .5s);
-		top: 0px;
-		left: 160px;
-		margin-bottom: 30px;
-
-		&:hover{
-			background-color: $skills!important;;
-		}
+	.active{
+		display: inline-block;
+		@include animation(fadeIn .5s);
 	}
 
-	#projects{
-		@include transition(background-color .5s);
-		top: 70px;
-		left: 220px;
-
-		&:hover{
-			background-color: $projects!important;;
-		}
-	}
-
-
-	#fullContent{
-		@include heightWidth(700px, 700px);
-		margin: 0 auto;
-		margin-top: 100px;
-	}
-
-	#fullInfo{
-		margin: 0 auto;
-		@include heightWidth(300px, 300px);
-		border: 5px solid white;
-		border-radius: 100%;
-	}
-
-	#mainInfo{
-		@include heightWidth(50px, 200px);	
-		margin: 0 auto;
-	}
-
-
-
-	#profile-pic{
+	.profile-pic{
 		@include heightWidth(200px, 200px);	
 		border-radius: 100%;
 		margin: 0 auto;
 		display: block;
 	}	
-	.git-in{
-		@include heightWidth(35px, 35px);
-		margin: 0 auto;
-		display: inline;
-	}
-	#git{
-		margin: 0px 55px 0px 30px;
-	}
-}
 
-#pageTwo{
-	padding-left: 6%;
-	width: 100%;
-	.skillbox{
-		@include heightWidth(150px, 150px);
-		@include transition(border-radius .5s);
-		@include grayscale(100%);
-		border: 5px solid $backgroundColor;
-		margin: 1% 6.5% 1%;
+	#pageOne{
+		.nav-buttons{
+			@include transition(background-color .5s);
+			@include transition(color .5s);
+			@include heightWidth(125px, 125px);	
+			@extend .circle-buttons;
+			position: relative;
+			background-color: $backgroundColor;
+			color: $fontColor;
 
-		@media all and (max-width: $midScreen){
-			margin: 1% 3.5% 1%;
+			&:hover{
+				color: $backgroundColor;
+			}
+		}
+		#about-me{
+			@include transition(background-color .5s);
+			position: relative;
+			top: 70px;
+			left: 100px;
+
+			&:hover{
+				background-color: $aboutMe!important;;
+			}
 		}
 
-		@media all and (max-width: $smallScreen){
-			@include heightWidth(100px, 100px);
-			margin: 1% 2% 1%;
+		#skills{
+			@include transition(background-color .5s);
+			top: 0px;
+			left: 160px;
+			margin-bottom: 30px;
+
+			&:hover{
+				background-color: $skills!important;;
+			}
 		}
 
-		&:hover{
+		#projects{
+			@include transition(background-color .5s);
+			top: 70px;
+			left: 220px;
+
+			&:hover{
+				background-color: $projects!important;;
+			}
+		}
+
+
+		#fullContent{
+			@include heightWidth(700px, 700px);
+			margin: 0 auto;
+			margin-top: 100px;
+			
+			@media all and (max-width: $midScreen){
+				margin-top: 250px;
+			}
+		}
+
+		#fullInfo{
+			margin: 0 auto;
+			@include heightWidth(300px, 300px);
+			border: 5px solid white;
 			border-radius: 100%;
-			@include grayscale(0%);
+		}
+
+		#mainInfo{
+			@include heightWidth(50px, 200px);	
+			margin: 0 auto;
+		}
+
+		.git-in{
+			@include heightWidth(35px, 35px);
+			margin: 0 auto;
+			display: inline;
+		}
+		#git{
+			margin: 0px 55px 0px 30px;
 		}
 	}
+
+	#pageTwo{
+		padding-left: 6%;
+		width: 100%;
+		.skillbox{
+			@include heightWidth(150px, 150px);
+			@include transition(border-radius .5s);
+			@include grayscale(100%);
+			border: 5px solid $backgroundColor;
+			margin: 1% 6.5% 1%;
+
+			@media all and (max-width: $midScreen){
+				margin: 1% 3.5% 1%;
+			}
+
+			@media all and (max-width: $smallScreen){
+				@include heightWidth(100px, 100px);
+				margin: 1% 2% 1%;
+			}
+
+			&:hover{
+				border-radius: 100%;
+				@include grayscale(0%);
+			}
+		}
+	}
+
+	#pageFour{
+		#me{
+			@include grayscale(100%);
+		}
+	}
+	@media all and (max-width: $midScreen){
+			padding: 0px 0px 0px;
+	}
+
 }
-
-
 
 
 

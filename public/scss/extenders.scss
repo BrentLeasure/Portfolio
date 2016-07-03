@@ -11,8 +11,14 @@
 //=========	
 //buttons
 //========
-.buttons{
+.circle-buttons{
 	border: 5px solid white;
 	border-radius: 100%;
 	text-align: center;
+}
+
+.buttons{
+	text-align: center;
+	border: 1px solid white;
+	border-radius: 5px;
 }

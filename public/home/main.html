@@ -7,13 +7,14 @@
 </head>
 <body>
 <div id="content">
+	<button onclick="ActivatePage('pageOne')" id="home-button">home</button>
 	<div id="pageOne" class="pages active">
 		<div id="fullContent">
-			<button onclick="NavbarClick('about-me', 0); ActivatePage('pageOne');" id="about-me" class="nav-buttons active-button">About Me</button>
-			<button onclick="NavbarClick('skills', 1); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
-			<button onclick="NavbarClick('projects', 2); ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
+			<button onclick= "ActivatePage('pageFour');" id="about-me" class="nav-buttons active-button">About Me</button>
+			<button onclick= "ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
+			<button onclick= "ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
 			<div id="fullInfo">
-				<img id="profile-pic" src="/../B.png">
+				<img class="profile-pic" src="/../B.png">
 				<div id="mainInfo">
 					<a target="_blank" href="https://github.com/BrentLeasure"><img class="git-in" id="git" src="/../githubLogo.png"></a>
 					<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img class="git-in" id="in" src="/../linkedInLogo.png"></a>
@@ -50,6 +51,7 @@
 
 	<div id="pageFour" class="pages">
 		<center>
+			<img class="profile-pic" id="me" src="/../me.png">
 			<p>Hello, and welcome to my website! A little background on me: I love to code. It is an amazing past time, and something that I thoroughly enjoy learning. When I'm not coding, I go hiking, climbing, biking, skiing and traveling. I hope to explore the world through out my life and see the different cultures and phenomenons that happens across the Earth.</p>
 			<p> Thanks for stopping by and enjoy your stay!</p>
 		</center>
