@@ -31,27 +31,92 @@
 body{
 	background-color: $backgroundColor;
 	color: $fontColor;	
-	margin: 0px;
-	padding: 0px, 0px, 0px;
-	padding: 0px;
+	margin: 0;
+    padding: 0;
 }
 
 #content{
 	@include animation(fadeIn .5s);
-	padding: 0px 50px 0px;
-
-	#home-button{
-		margin: 20px 20px 0px;
-		@extend .buttons;
-		visibility: hidden;
-		background-color: $backgroundColor;
-		color: $fontColor;
-	}
+	padding: 100px 50px 0px;
 
 
 	//=========
 	//Navigation
 	//=========
+	#navigation{ 
+		padding-left: 37px;
+		margin: 0 auto;
+		@include heightWidth(50px, 600px);
+
+		#home-button{
+			margin: 20px 20px 0px;
+			@extend .buttons;
+			visibility: hidden;
+			background-color: $backgroundColor;
+			color: $fontColor;
+		}
+
+		.nav-buttons{
+			@include transition(background-color .5s);
+			@include transition(color .5s);
+			@include heightWidth(125px, 125px);	
+			@extend .circle-buttons;
+
+			background-color: $backgroundColor;
+			color: $fontColor;
+			position: relative;
+	
+			&:hover{
+				color: $backgroundColor;
+			}
+
+			@media screen and (max-width: $smallScreen){
+				@include heightWidth(75px, 75px);
+			}
+
+		}
+
+		#about-me{
+			@include transition(background-color .5s);
+			top: 70px;
+			right: 20px;
+			&:hover{
+				background-color: $aboutMe!important;;
+			}
+
+			@media screen and (max-width: $smallScreen){
+				top: 0px;
+				right: 0px;
+			}
+		}
+
+		#skills{
+			@include transition(background-color .5s);
+			top: 0px;
+
+			&:hover{
+				background-color: $skills!important;;
+			}
+		}
+
+		#projects{
+			@include transition(background-color .5s);
+			top: 70px;
+			left: 27px;
+			&:hover{
+				background-color: $projects!important;;
+			}
+
+			@media screen and (max-width: $smallScreen){
+				top: 0px;
+				left: 0px;
+			}
+		}
+
+		@media screen and (max-width: $smallScreen){
+			@include heightWidth(50px, 200px);
+		}
+	}
 
 	//=============
 	//active button
@@ -84,63 +149,12 @@ body{
 		display: block;
 	}	
 
+	//========
+	//pages
+	//========
+
 	#pageOne{
-		.nav-buttons{
-			@include transition(background-color .5s);
-			@include transition(color .5s);
-			@include heightWidth(125px, 125px);	
-			@extend .circle-buttons;
-			position: relative;
-			background-color: $backgroundColor;
-			color: $fontColor;
-
-			&:hover{
-				color: $backgroundColor;
-			}
-		}
-		#about-me{
-			@include transition(background-color .5s);
-			position: relative;
-			top: 70px;
-			left: 100px;
-
-			&:hover{
-				background-color: $aboutMe!important;;
-			}
-		}
-
-		#skills{
-			@include transition(background-color .5s);
-			top: 0px;
-			left: 160px;
-			margin-bottom: 30px;
-
-			&:hover{
-				background-color: $skills!important;;
-			}
-		}
-
-		#projects{
-			@include transition(background-color .5s);
-			top: 70px;
-			left: 220px;
-
-			&:hover{
-				background-color: $projects!important;;
-			}
-		}
-
-
-		#fullContent{
-			@include heightWidth(700px, 700px);
-			margin: 0 auto;
-			margin-top: 100px;
-			
-			@media all and (max-width: $midScreen){
-				margin-top: 250px;
-			}
-		}
-
+		margin-top: 100px;
 		#fullInfo{
 			margin: 0 auto;
 			@include heightWidth(300px, 300px);
@@ -158,6 +172,7 @@ body{
 			margin: 0 auto;
 			display: inline;
 		}
+
 		#git{
 			margin: 0px 55px 0px 30px;
 		}
@@ -193,9 +208,6 @@ body{
 		#me{
 			@include grayscale(100%);
 		}
-	}
-	@media all and (max-width: $midScreen){
-			padding: 0px 0px 0px;
 	}
 
 }

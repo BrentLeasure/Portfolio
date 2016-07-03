@@ -7,12 +7,13 @@
 </head>
 <body>
 <div id="content">
-	<button onclick="ActivatePage('pageOne')" id="home-button">home</button>
-	<div id="pageOne" class="pages active">
-		<div id="fullContent">
+	<div id="navigation">
+			<button onclick="ActivatePage('pageOne')" id="home-button">home</button>
 			<button onclick= "ActivatePage('pageFour');" id="about-me" class="nav-buttons active-button">About Me</button>
 			<button onclick= "ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
 			<button onclick= "ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
+	</div>
+	<div id="pageOne" class="pages active">
 			<div id="fullInfo">
 				<img class="profile-pic" src="/../B.png">
 				<div id="mainInfo">
@@ -20,7 +21,6 @@
 					<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img class="git-in" id="in" src="/../linkedInLogo.png"></a>
 				</div>
 			</div>
-		</div>
 	</div>
 	<div id="pageTwo" class="pages">
 			<img class="skillBox" src="../html5.png">

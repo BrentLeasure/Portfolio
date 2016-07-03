@@ -5,12 +5,12 @@
   padding: 0px;
   margin: 0px; }
 
-.circle-buttons, #content #pageOne .nav-buttons {
+.circle-buttons, #content #navigation .nav-buttons {
   border: 5px solid white;
   border-radius: 100%;
   text-align: center; }
 
-.buttons, #content #home-button {
+.buttons, #content #navigation #home-button {
   text-align: center;
   border: 1px solid white;
   border-radius: 5px; }
@@ -28,21 +28,78 @@
 body {
   background-color: black;
   color: white;
-  margin: 0px;
-  padding: 0px, 0px, 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 #content {
   animation: fadeIn 0.5s;
   -moz-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
   -webkit-animation: fadeIn 0.5s;
-  padding: 0px 50px 0px; }
-  #content #home-button {
-    margin: 20px 20px 0px;
-    visibility: hidden;
-    background-color: black;
-    color: white; }
+  padding: 100px 50px 0px; }
+  #content #navigation {
+    padding-left: 37px;
+    margin: 0 auto;
+    height: 50px;
+    width: 600px; }
+    #content #navigation #home-button {
+      margin: 20px 20px 0px;
+      visibility: hidden;
+      background-color: black;
+      color: white; }
+    #content #navigation .nav-buttons {
+      transition: background-color 0.5s;
+      -moz-transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s;
+      transition: color 0.5s;
+      -moz-transition: color 0.5s;
+      -webkit-transition: color 0.5s;
+      height: 125px;
+      width: 125px;
+      background-color: black;
+      color: white;
+      position: relative; }
+      #content #navigation .nav-buttons:hover {
+        color: black; }
+      @media screen and (max-width: 750px) {
+        #content #navigation .nav-buttons {
+          height: 75px;
+          width: 75px; } }
+    #content #navigation #about-me {
+      transition: background-color 0.5s;
+      -moz-transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s;
+      top: 70px;
+      right: 20px; }
+      #content #navigation #about-me:hover {
+        background-color: #1072b8 !important; }
+      @media screen and (max-width: 750px) {
+        #content #navigation #about-me {
+          top: 0px;
+          right: 0px; } }
+    #content #navigation #skills {
+      transition: background-color 0.5s;
+      -moz-transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s;
+      top: 0px; }
+      #content #navigation #skills:hover {
+        background-color: #e44d26 !important; }
+    #content #navigation #projects {
+      transition: background-color 0.5s;
+      -moz-transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s;
+      top: 70px;
+      left: 27px; }
+      #content #navigation #projects:hover {
+        background-color: #90c53f !important; }
+      @media screen and (max-width: 750px) {
+        #content #navigation #projects {
+          top: 0px;
+          left: 0px; } }
+    @media screen and (max-width: 750px) {
+      #content #navigation {
+        height: 50px;
+        width: 200px; } }
   #content .active-button li {
     color: black; }
   #content .pages {
@@ -61,71 +118,25 @@ body {
     border-radius: 100%;
     margin: 0 auto;
     display: block; }
-  #content #pageOne .nav-buttons {
-    transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-    transition: color 0.5s;
-    -moz-transition: color 0.5s;
-    -webkit-transition: color 0.5s;
-    height: 125px;
-    width: 125px;
-    position: relative;
-    background-color: black;
-    color: white; }
-    #content #pageOne .nav-buttons:hover {
-      color: black; }
-  #content #pageOne #about-me {
-    transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-    position: relative;
-    top: 70px;
-    left: 100px; }
-    #content #pageOne #about-me:hover {
-      background-color: #1072b8 !important; }
-  #content #pageOne #skills {
-    transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-    top: 0px;
-    left: 160px;
-    margin-bottom: 30px; }
-    #content #pageOne #skills:hover {
-      background-color: #e44d26 !important; }
-  #content #pageOne #projects {
-    transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    -webkit-transition: background-color 0.5s;
-    top: 70px;
-    left: 220px; }
-    #content #pageOne #projects:hover {
-      background-color: #90c53f !important; }
-  #content #pageOne #fullContent {
-    height: 700px;
-    width: 700px;
-    margin: 0 auto;
+  #content #pageOne {
     margin-top: 100px; }
-    @media all and (max-width: 970px) {
-      #content #pageOne #fullContent {
-        margin-top: 250px; } }
-  #content #pageOne #fullInfo {
-    margin: 0 auto;
-    height: 300px;
-    width: 300px;
-    border: 5px solid white;
-    border-radius: 100%; }
-  #content #pageOne #mainInfo {
-    height: 50px;
-    width: 200px;
-    margin: 0 auto; }
-  #content #pageOne .git-in {
-    height: 35px;
-    width: 35px;
-    margin: 0 auto;
-    display: inline; }
-  #content #pageOne #git {
-    margin: 0px 55px 0px 30px; }
+    #content #pageOne #fullInfo {
+      margin: 0 auto;
+      height: 300px;
+      width: 300px;
+      border: 5px solid white;
+      border-radius: 100%; }
+    #content #pageOne #mainInfo {
+      height: 50px;
+      width: 200px;
+      margin: 0 auto; }
+    #content #pageOne .git-in {
+      height: 35px;
+      width: 35px;
+      margin: 0 auto;
+      display: inline; }
+    #content #pageOne #git {
+      margin: 0px 55px 0px 30px; }
   #content #pageTwo {
     padding-left: 6%;
     width: 100%; }
@@ -154,8 +165,5 @@ body {
   #content #pageFour #me {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%); }
-  @media all and (max-width: 970px) {
-    #content {
-      padding: 0px 0px 0px; } }
 
 /*# sourceMappingURL=main.css.map */
