@@ -6,22 +6,21 @@
 	<link rel="stylesheet" type="text/css" href="home/main.css">
 </head>
 <body>
-<div id="nav">
-	<ul><button onclick="NavbarClick('about-me', 0); ActivatePage('pageOne');" id="about-me" class="nav-buttons active-button"><li>About Me</li></button><button onclick="NavbarClick('skills', 1); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons"><li>Skills</li></button><button onclick="NavbarClick('projects', 2); ActivatePage('pageThree');" id="projects" class="nav-buttons"><li>Projects</li></button></ul>
-</div>
 <div id="content">
 	<div id="pageOne" class="pages active">
-		
-			<img id="profile-pic" src="/../Me.png">
-		<div id="mainInfo">
-			<a target="_blank" href="https://github.com/BrentLeasure"><img class="git-in" id="git" src="/../githubLogo.png"></a>
-			<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img class="git-in" id="in" src="/../linkedInLogo.png"></a>
-		</div><center>
-			<h3>Brent Leasure</h3>
-
-				<p>Hello, and welcome to my website! A little background on me: I love to code. It is an amazing past time, and something that I thoroughly enjoy learning. When I'm not coding, I go hiking, climbing, biking, skiing and traveling. I hope to explore the world through out my life and see the different cultures and phenomenons that happens across the Earth.</p>
-			<p> Thanks for stopping by and enjoy your stay!</p>
-		</center></div>
+		<div id="fullContent">
+			<button onclick="NavbarClick('about-me', 0); ActivatePage('pageOne');" id="about-me" class="nav-buttons active-button">About Me</button>
+			<button onclick="NavbarClick('skills', 1); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
+			<button onclick="NavbarClick('projects', 2); ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
+			<div id="fullInfo">
+				<img id="profile-pic" src="/../B.png">
+				<div id="mainInfo">
+					<a target="_blank" href="https://github.com/BrentLeasure"><img class="git-in" id="git" src="/../githubLogo.png"></a>
+					<a target="_blank" href="https://www.linkedin.com/in/brentonleasure"><img class="git-in" id="in" src="/../linkedInLogo.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="pageTwo" class="pages">
 			<img class="skillBox" src="../html5.png">
 			<img class="skillBox" src="../css3.png">
@@ -47,6 +46,13 @@
 			<li>Email: Test@test.com </li>
 			<li>Password: 12345</li>
 		</ul>
+	</div>
+
+	<div id="pageFour" class="pages">
+		<center>
+			<p>Hello, and welcome to my website! A little background on me: I love to code. It is an amazing past time, and something that I thoroughly enjoy learning. When I'm not coding, I go hiking, climbing, biking, skiing and traveling. I hope to explore the world through out my life and see the different cultures and phenomenons that happens across the Earth.</p>
+			<p> Thanks for stopping by and enjoy your stay!</p>
+		</center>
 	</div>
 </div>
 

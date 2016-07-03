@@ -1,0 +1,13 @@
+.generalLi {
+  list-style: none; }
+
+.generalUl {
+  padding: 0px;
+  margin: 0px; }
+
+.buttons {
+  border: 5px solid white;
+  border-radius: 100%;
+  text-align: center; }
+
+/*# sourceMappingURL=extenders.css.map */
