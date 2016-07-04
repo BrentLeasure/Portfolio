@@ -32,7 +32,6 @@ body{
 	@include animation(fadeIn .5s);
 	padding: 20px 50px 0px;
 
-
 //=============================================
 //Navigation
 //=============================================
@@ -42,11 +41,19 @@ body{
 		@include heightWidth(50px, 600px);
 
 		#home-button{
-			margin: 20px 20px 0px;
 			@extend .buttons;
+
+			margin: 20px 20px 0px;
+			position: relative;
+			right: 70px;
 			visibility: hidden;
 			background-color: $backgroundColor;
 			color: $fontColor;
+
+			@media screen and(max-width: $smallScreen){
+				left: 45px;
+    			top: 100px;
+			}
 		}
 
 		.nav-buttons{
