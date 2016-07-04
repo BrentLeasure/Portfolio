@@ -1,8 +1,31 @@
 var previousPageID = "pageOne";
-var previousButtonID = "about-me";
+var previousButtonID = "home";
 var colors = ['#1072b8', '#e44d26', '#90c53f'];
 
 
+window.onresize = function(event) {
+    if(window.innerWidth > 751){
+    	if(previousButtonID == 'home'){
+	    	document.getElementById('about-me').style.top = '70px';
+			document.getElementById('skills').style.top = '0px';
+			document.getElementById('projects').style.top = '70px';
+		}else{
+			document.getElementById('about-me').style.top = '10px';
+			document.getElementById('skills').style.top = '10px';
+			document.getElementById('projects').style.top = '10px';
+		}
+    }else{
+    	if(previousButtonID == 'home'){
+    		document.getElementById('about-me').style.top = '125px';
+			document.getElementById('skills').style.top = '-40px';
+			document.getElementById('projects').style.top = '-75px';
+    	}else{
+    		document.getElementById('about-me').style.top = '10px';
+			document.getElementById('skills').style.top = '-90px';
+			document.getElementById('projects').style.top = '-190px';
+    	}
+    }
+};
 
 function resetButtonLocation(){
 	document.getElementById(previousButtonID).style.backgroundColor = "black";
@@ -15,6 +38,7 @@ function resetButtonLocation(){
 		document.getElementById('skills').style.top = '-40px';
 		document.getElementById('projects').style.top = '-75px';
 	}	
+	previousButtonID = 'home';
 }
 
 
@@ -31,12 +55,10 @@ function changeButtonLocation(){
 }
 
 function NavbarClick(id, idNum){
-	if(previousButtonID == ""){
-		document.getElementById("about-me").classList.remove("active-button");
+	if(previousButtonID == "home"){
 		document.getElementById(id).classList.add("active-button"); 
 
 		document.getElementById(id).style.backgroundColor = colors[idNum];
-		document.getElementById("about-me").style.backgroundColor = "black";
 	}else{
 		document.getElementById(previousButtonID).classList.remove("active-button");
 		document.getElementById(id).classList.add("active-button");
