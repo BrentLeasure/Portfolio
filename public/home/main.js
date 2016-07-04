@@ -2,6 +2,34 @@ var previousPageID = "pageOne";
 var previousButtonID = "about-me";
 var colors = ['#1072b8', '#e44d26', '#90c53f'];
 
+
+
+function resetButtonLocation(){
+	document.getElementById(previousButtonID).style.backgroundColor = "black";
+	if(window.innerWidth > 751){
+		document.getElementById('about-me').style.top = '70px';
+		document.getElementById('skills').style.top = '0px';
+		document.getElementById('projects').style.top = '70px';
+	}else{
+		document.getElementById('about-me').style.top = '125px';
+		document.getElementById('skills').style.top = '-40px';
+		document.getElementById('projects').style.top = '-75px';
+	}	
+}
+
+
+function changeButtonLocation(){
+	if(window.innerWidth > 751){
+		document.getElementById('about-me').style.top = '10px';
+		document.getElementById('skills').style.top = '10px';
+		document.getElementById('projects').style.top = '10px';
+	}else{
+		document.getElementById('about-me').style.top = '10px';
+		document.getElementById('skills').style.top = '-90px';
+		document.getElementById('projects').style.top = '-190px';
+	}
+}
+
 function NavbarClick(id, idNum){
 	if(previousButtonID == ""){
 		document.getElementById("about-me").classList.remove("active-button");
@@ -17,6 +45,7 @@ function NavbarClick(id, idNum){
 		document.getElementById(previousButtonID).style.backgroundColor = "black";
 	}
 
+	changeButtonLocation();
 	previousButtonID = id;
 }
 

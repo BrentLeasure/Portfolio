@@ -1,6 +1,8 @@
 @import '../scss/mixins';
 @import '../scss/extenders';
 @import '../scss/variables';
+
+
 //===================================================
 //keyframes
 //===================================================
@@ -11,15 +13,6 @@
 	to{
 		opacity: 1;
 	}
-}
-
-//===================================================
-//Keyframes
-//===================================================
-
-@keyframes fadeIn{
-	from{opacity: 0;}
-	to{opacity: 1;}
 }
 	
 
@@ -37,12 +30,12 @@ body{
 
 #content{
 	@include animation(fadeIn .5s);
-	padding: 100px 50px 0px;
+	padding: 20px 50px 0px;
 
 
-	//=========
-	//Navigation
-	//=========
+//=============================================
+//Navigation
+//=============================================
 	#navigation{ 
 		padding-left: 37px;
 		margin: 0 auto;
@@ -71,13 +64,14 @@ body{
 			}
 
 			@media screen and (max-width: $smallScreen){
-				@include heightWidth(75px, 75px);
+				@include heightWidth(100px, 100px);
 			}
 
 		}
 
 		#about-me{
 			@include transition(background-color .5s);
+			@include transition(top .5s);
 			top: 70px;
 			right: 20px;
 			&:hover{
@@ -85,22 +79,30 @@ body{
 			}
 
 			@media screen and (max-width: $smallScreen){
-				top: 0px;
-				right: 0px;
+				top: 125px;
+				right: 175px;
 			}
 		}
 
 		#skills{
 			@include transition(background-color .5s);
+			@include transition(top .5s);
 			top: 0px;
 
 			&:hover{
 				background-color: $skills!important;;
 			}
+
+			@media screen and (max-width: $smallScreen){
+				left: 34px;
+				top: -40px;
+
+			}
 		}
 
 		#projects{
 			@include transition(background-color .5s);
+			@include transition(top .5s);
 			top: 70px;
 			left: 27px;
 			&:hover{
@@ -108,8 +110,8 @@ body{
 			}
 
 			@media screen and (max-width: $smallScreen){
-				top: 0px;
-				left: 0px;
+				top: -75px;
+				left: 152px;
 			}
 		}
 
@@ -128,13 +130,14 @@ body{
 	}
 
 
-	//========
-	//page layout
-	//========
+//================================================
+//page layout
+//================================================
 
 	.pages{
 		@include center(100%);
 		display: none;
+		margin-top: 115px;
 	}
 
 	.active{
@@ -149,9 +152,9 @@ body{
 		display: block;
 	}	
 
-	//========
-	//pages
-	//========
+//================================================
+//pages
+//================================================
 
 	#pageOne{
 		margin-top: 100px;
@@ -160,6 +163,10 @@ body{
 			@include heightWidth(300px, 300px);
 			border: 5px solid white;
 			border-radius: 100%;
+			@media screen and (max-width: $smallScreen){
+				position: relative;
+				top: 50px;
+			}
 		}
 
 		#mainInfo{
@@ -209,7 +216,9 @@ body{
 			@include grayscale(100%);
 		}
 	}
-
+	@media screen and (max-width: $smallScreen){
+		padding: 0px 0px 0px;
+	}
 }
 
 

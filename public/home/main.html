@@ -8,10 +8,10 @@
 <body>
 <div id="content">
 	<div id="navigation">
-			<button onclick="ActivatePage('pageOne')" id="home-button">home</button>
-			<button onclick= "ActivatePage('pageFour');" id="about-me" class="nav-buttons active-button">About Me</button>
-			<button onclick= "ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
-			<button onclick= "ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
+			<button onclick="resetButtonLocation(); ActivatePage('pageOne')" id="home-button">home</button>
+			<button onclick= "NavbarClick('about-me', 0); ActivatePage('pageFour');" id="about-me" class="nav-buttons active-button">About Me</button>
+			<button onclick= "NavbarClick('skills', 1); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
+			<button onclick= "NavbarClick('projects', 2); ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
 	</div>
 	<div id="pageOne" class="pages active">
 			<div id="fullInfo">
