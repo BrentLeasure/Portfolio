@@ -38,16 +38,24 @@ body {
     height: 50px;
     width: 600px; }
     #content #navigation #home-button {
-      margin: 20px 20px 0px;
+      transition: background-color 0.5s;
+      -moz-transition: background-color 0.5s;
+      -webkit-transition: background-color 0.5s;
       position: relative;
-      right: 70px;
+      margin: 20px 20px 0px;
+      padding: 5px 30px 5px;
+      top: 100px;
+      left: 215px;
       visibility: hidden;
       background-color: black;
       color: white; }
+      #content #navigation #home-button:hover {
+        background-color: white;
+        color: black; }
       @media screen and (max-width: 750px) {
         #content #navigation #home-button {
-          left: 45px;
-          top: 100px; } }
+          left: 20px;
+          top: 150px; } }
     #content #navigation .nav-buttons {
       transition: background-color 0.5s;
       -moz-transition: background-color 0.5s;
@@ -67,49 +75,41 @@ body {
           height: 100px;
           width: 100px; } }
     #content #navigation #about-me {
-      transition: background-color 0.5s;
-      -moz-transition: background-color 0.5s;
-      -webkit-transition: background-color 0.5s;
-      transition: top 0.5s;
-      -moz-transition: top 0.5s;
-      -webkit-transition: top 0.5s;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
       top: 70px;
-      right: 20px; }
+      right: 75px; }
       #content #navigation #about-me:hover {
         background-color: #1072b8 !important; }
       @media screen and (max-width: 750px) {
         #content #navigation #about-me {
-          top: 125px;
-          right: 175px; } }
+          top: 80px;
+          left: -72px; } }
     #content #navigation #skills {
-      transition: background-color 0.5s;
-      -moz-transition: background-color 0.5s;
-      -webkit-transition: background-color 0.5s;
-      transition: top 0.5s;
-      -moz-transition: top 0.5s;
-      -webkit-transition: top 0.5s;
-      top: 0px; }
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      top: 0px;
+      right: 45px; }
       #content #navigation #skills:hover {
         background-color: #e44d26 !important; }
       @media screen and (max-width: 750px) {
         #content #navigation #skills {
           left: 34px;
-          top: -40px; } }
+          top: -70px; } }
     #content #navigation #projects {
-      transition: background-color 0.5s;
-      -moz-transition: background-color 0.5s;
-      -webkit-transition: background-color 0.5s;
-      transition: top 0.5s;
-      -moz-transition: top 0.5s;
-      -webkit-transition: top 0.5s;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
       top: 70px;
-      left: 27px; }
+      right: 8px; }
       #content #navigation #projects:hover {
         background-color: #90c53f !important; }
       @media screen and (max-width: 750px) {
         #content #navigation #projects {
-          top: -75px;
-          left: 152px; } }
+          top: -120px;
+          left: 139px; } }
     @media screen and (max-width: 750px) {
       #content #navigation {
         height: 50px;
@@ -120,7 +120,7 @@ body {
     width: 100%;
     margin: 0 auto;
     display: none;
-    margin-top: 115px; }
+    margin-top: 150px; }
   #content .active {
     display: inline-block;
     animation: fadeIn 0.5s;
@@ -185,6 +185,6 @@ body {
     filter: grayscale(100%); }
   @media screen and (max-width: 750px) {
     #content {
-      padding: 0px 0px 0px; } }
+      padding: 0px 5px 0px; } }
 
 /*# sourceMappingURL=main.css.map */

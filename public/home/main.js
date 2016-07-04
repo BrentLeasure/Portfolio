@@ -16,9 +16,9 @@ window.onresize = function(event) {
 		}
     }else{
     	if(previousButtonID == 'home'){
-    		document.getElementById('about-me').style.top = '125px';
-			document.getElementById('skills').style.top = '-40px';
-			document.getElementById('projects').style.top = '-75px';
+    		document.getElementById('about-me').style.top = '80px';
+			document.getElementById('skills').style.top = '-70px';
+			document.getElementById('projects').style.top = '-120px';
     	}else{
     		document.getElementById('about-me').style.top = '10px';
 			document.getElementById('skills').style.top = '-90px';
@@ -34,9 +34,9 @@ function resetButtonLocation(){
 		document.getElementById('skills').style.top = '0px';
 		document.getElementById('projects').style.top = '70px';
 	}else{
-		document.getElementById('about-me').style.top = '125px';
-		document.getElementById('skills').style.top = '-40px';
-		document.getElementById('projects').style.top = '-75px';
+		document.getElementById('about-me').style.top = '80px';
+		document.getElementById('skills').style.top = '-70px';
+		document.getElementById('projects').style.top = '-120px';
 	}	
 	previousButtonID = 'home';
 }

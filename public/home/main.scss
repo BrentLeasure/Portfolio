@@ -42,17 +42,25 @@ body{
 
 		#home-button{
 			@extend .buttons;
-
-			margin: 20px 20px 0px;
+			@include transition(background-color .5s);
 			position: relative;
-			right: 70px;
+			margin: 20px 20px 0px;
+			padding: 5px 30px 5px;
+			
+			top: 100px;
+			left: 215px;
 			visibility: hidden;
 			background-color: $backgroundColor;
 			color: $fontColor;
 
+			&:hover{
+				background-color: $fontColor;
+				color: $backgroundColor;
+			}
+
 			@media screen and(max-width: $smallScreen){
-				left: 45px;
-    			top: 100px;
+				left: 20px;
+    			top: 150px;
 			}
 		}
 
@@ -77,24 +85,23 @@ body{
 		}
 
 		#about-me{
-			@include transition(background-color .5s);
-			@include transition(top .5s);
+			@include transition(all .5s);
 			top: 70px;
-			right: 20px;
+			right: 75px;
 			&:hover{
 				background-color: $aboutMe!important;;
 			}
 
 			@media screen and (max-width: $smallScreen){
-				top: 125px;
-				right: 175px;
+				top: 80px;
+				left: -72px;
 			}
 		}
 
 		#skills{
-			@include transition(background-color .5s);
-			@include transition(top .5s);
+			@include transition(all .5s);
 			top: 0px;
+			right: 45px;
 
 			&:hover{
 				background-color: $skills!important;;
@@ -102,23 +109,22 @@ body{
 
 			@media screen and (max-width: $smallScreen){
 				left: 34px;
-				top: -40px;
+				top: -70px;
 
 			}
 		}
 
 		#projects{
-			@include transition(background-color .5s);
-			@include transition(top .5s);
+			@include transition(all .5s);
 			top: 70px;
-			left: 27px;
+			right: 8px;
 			&:hover{
 				background-color: $projects!important;;
 			}
 
 			@media screen and (max-width: $smallScreen){
-				top: -75px;
-				left: 152px;
+				top: -120px;
+				left: 139px;
 			}
 		}
 
@@ -144,7 +150,7 @@ body{
 	.pages{
 		@include center(100%);
 		display: none;
-		margin-top: 115px;
+		margin-top: 150px;
 	}
 
 	.active{
@@ -223,7 +229,7 @@ body{
 		}
 	}
 	@media screen and (max-width: $smallScreen){
-		padding: 0px 0px 0px;
+		padding: 0px 5px 0px;
 	}
 }
 
