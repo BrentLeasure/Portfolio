@@ -200,25 +200,32 @@ body{
 
 	#pageTwo{
 		width: 100%;
-		.skillbox{
-			@include heightWidth(150px, 150px);
-			@include transition(border-radius .5s);
-			@include grayscale(100%);
-			border: 5px solid $backgroundColor;
-			margin: 1% 6.5% 1%;
 
-			@media all and (max-width: $midScreen){
-				margin: 1% 3.5% 1%;
-			}
+		#page-two-section{ 
+			display: block;
+			padding-left: 5%;
+		
 
-			@media all and (max-width: $smallScreen){
-				@include heightWidth(100px, 100px);
-				margin: 1% 2% 1%;
-			}
+			.skillbox{
+				@include heightWidth(150px, 150px);
+				@include transition(border-radius .5s);
+				@include grayscale(100%);
+				border: 5px solid $backgroundColor;
+				margin: 1% 6.5% 1%;
 
-			&:hover{
-				border-radius: 100%;
-				@include grayscale(0%);
+				@media all and (max-width: $midScreen){
+					margin: 1% 3.5% 1%;
+				}
+
+				@media all and (max-width: $smallScreen){
+					@include heightWidth(100px, 100px);
+					margin: 1% 2% 1%;
+				}
+
+				&:hover{
+					border-radius: 100%;
+					@include grayscale(0%);
+				}
 			}
 		}
 	}
@@ -226,10 +233,6 @@ body{
 	#pageFour{
 		#me{
 			@include grayscale(100%);
-		}
-		.section{ 
-			display: block;
-			margin: auto;
 		}
 		.col{
 			float: left;
