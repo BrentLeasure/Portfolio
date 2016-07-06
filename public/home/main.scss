@@ -227,6 +227,15 @@ body{
 		#me{
 			@include grayscale(100%);
 		}
+		.section{ 
+			display: block;
+			margin: auto;
+		}
+		.col{
+			float: left;
+			width: 31%;
+			margin: 0% 1% 0%;
+		}
 	}
 	@media screen and (max-width: $smallScreen){
 		padding: 0px 5px 0px;
