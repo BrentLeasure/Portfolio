@@ -192,6 +192,8 @@ body {
     margin: 0% 1% 0%; }
   @media screen and (max-width: 750px) {
     #content {
-      padding: 0px 5px 0px; } }
+      padding: 0px 5px 0px; }
+      #content .col {
+        font-size: 13px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -242,6 +242,9 @@ body{
 	}
 	@media screen and (max-width: $smallScreen){
 		padding: 0px 5px 0px;
+		.col{
+			font-size: $fontSizeSmall;
+		}
 	}
 }
 
