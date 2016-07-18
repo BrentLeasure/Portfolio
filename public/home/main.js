@@ -15,8 +15,8 @@ window.onresize = function(event) {
 			document.getElementById('projects').style.top = '70px';
 			var navButtons = document.getElementsByClassName('nav-buttons');
 			for(var button = 0; button < navButtons.length; button++){
-				navButtons[button].style.height = 125px;
-				navButtons[button].style.height = 125px;
+				// navButtons[button].style.height = 125px;
+				navButtons[button].style.height = '125px';
 			}
 		}else{
 			//If the home button was NOT clicked last, then it will adjust the 

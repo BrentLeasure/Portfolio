@@ -1,0 +1,104 @@
+.generalLi {
+  list-style: none; }
+
+.generalUl {
+  padding: 0px;
+  margin: 0px; }
+
+.circle-buttons, #navigation .nav-buttons {
+  border: 5px solid white;
+  border-radius: 100%;
+  text-align: center; }
+
+.buttons, #navigation #home-button {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 5px; }
+
+#navigation {
+  padding-left: 37px;
+  margin: 0 auto;
+  height: 50px;
+  width: 600px; }
+  #navigation #home-button {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    position: relative;
+    margin: 20px 20px 0px;
+    padding: 5px 30px 5px;
+    top: 100px;
+    left: 215px;
+    visibility: hidden;
+    background-color: black;
+    color: white; }
+    #navigation #home-button:hover {
+      background-color: white;
+      color: black; }
+    @media screen and (max-width: 750px) {
+      #navigation #home-button {
+        left: 20px;
+        top: 150px; } }
+  #navigation .nav-buttons {
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    height: 125px;
+    width: 125px;
+    background-color: black;
+    color: white;
+    position: relative; }
+    #navigation .nav-buttons:hover {
+      color: black; }
+    @media screen and (max-width: 750px) {
+      #navigation .nav-buttons {
+        height: 100px;
+        width: 100px; } }
+  #navigation #about-me {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    top: 70px;
+    right: 75px; }
+    #navigation #about-me:hover {
+      background-color: #1072b8 !important; }
+    @media screen and (max-width: 750px) {
+      #navigation #about-me {
+        top: 80px;
+        left: -72px; } }
+  #navigation #skills {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    top: 0px;
+    right: 45px; }
+    #navigation #skills:hover {
+      background-color: #e44d26 !important; }
+    @media screen and (max-width: 750px) {
+      #navigation #skills {
+        left: 34px;
+        top: -70px; } }
+  #navigation #projects {
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    top: 70px;
+    right: 8px; }
+    #navigation #projects:hover {
+      background-color: #90c53f !important; }
+    @media screen and (max-width: 750px) {
+      #navigation #projects {
+        top: -120px;
+        left: 139px; } }
+  @media screen and (max-width: 750px) {
+    #navigation {
+      height: 50px;
+      width: 200px; } }
+
+.active-button li {
+  color: black; }
+
+/*# sourceMappingURL=navigation.css.map */
