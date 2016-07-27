@@ -1,23 +1,14 @@
-var previousPageID = "pageOne";
-var previousButtonID = "home";
-var colors = ['#1072b8', '#e44d26', '#90c53f'];
+var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'], navButtons = document.getElementsByClassName('nav-buttons');
 
-
-window.onresize = function(event) {
-	//if window resizes, this will run
-    if(window.innerWidth > 751){
+function changeButtonLocation(isWindoResize){
+	    if(window.innerWidth > 751){
     	//if the window is BIGGER than 751px, this will fire
-    	if(previousButtonID == 'home'){
+    	if(previousButtonID == 'home' && isWindoResize){
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
 	    	document.getElementById('about-me').style.top = '70px';
 			document.getElementById('skills').style.top = '0px';
 			document.getElementById('projects').style.top = '70px';
-			var navButtons = document.getElementsByClassName('nav-buttons');
-			for(var button = 0; button < navButtons.length; button++){
-				// navButtons[button].style.height = 125px;
-				navButtons[button].style.height = '125px';
-			}
 		}else{
 			//If the home button was NOT clicked last, then it will adjust the 
     		//location of the buttons as if they were NOT on the main page
@@ -37,10 +28,15 @@ window.onresize = function(event) {
     		//If the home button was NOT clicked last, then it will adjust the 
     		//location of the buttons as if they were NOT on the main page
     		document.getElementById('about-me').style.top = '10px';
-			document.getElementById('skills').style.top = '-90px';
-			document.getElementById('projects').style.top = '-190px';
+			document.getElementById('skills').style.top = '-40px';
+			document.getElementById('projects').style.top = '-89px';
     	}
     }
+}
+
+window.onresize = function(event) {
+	//if window resizes, this will run
+	changeButtonLocation(true);
 };
 
 function resetButtonLocation(){
@@ -62,22 +58,6 @@ function resetButtonLocation(){
 	previousButtonID = 'home';
 }
 
-
-function changeButtonLocation(){
-	//if a navigation button is clicked, this will fire
-	if(window.innerWidth > 751){
-		//if the window is BIGGER than 751px, this will fire
-		document.getElementById('about-me').style.top = '10px';
-		document.getElementById('skills').style.top = '10px';
-		document.getElementById('projects').style.top = '10px';
-	}else{
-		//if the window is SMALLER than 751px, this will fire
-		document.getElementById('about-me').style.top = '10px';
-		document.getElementById('skills').style.top = '-90px';
-		document.getElementById('projects').style.top = '-190px';
-	}
-}
-
 function NavbarClick(id, idNum){
 	if(previousButtonID == "home"){
 		//if previous button is 'home', then there is no previous button to reset
@@ -97,7 +77,7 @@ function NavbarClick(id, idNum){
 	}
 
 	//changes the buttons location
-	changeButtonLocation();
+	changeButtonLocation(false);
 	//previous button is set to the button that was clicked
 	previousButtonID = id;
 }
