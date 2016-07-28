@@ -1,9 +1,9 @@
 var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'], navButtons = document.getElementsByClassName('nav-buttons');
 
-function changeButtonLocation(bool){
+function changeButtonLocation(isWindoResize){
 	if(window.innerWidth > 751){
     	//if the window is BIGGER than 751px, this will fire
-    	if(bool){
+    	if(previousButtonID == 'home' && isWindoResize){
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
 	    	document.getElementById('about-me').style.top = '70px';
@@ -12,7 +12,6 @@ function changeButtonLocation(bool){
 
 			//loop through and set nav buttons to circles
 			for(var button = 0; button < navButtons.length; button++){
-				console.log("testing");
 				navButtons[button].style.height = '125px';
 				navButtons[button].style.borderRadius = '100%';
 			}
@@ -26,14 +25,13 @@ function changeButtonLocation(bool){
 
 			//loop through and set nav buttons to rectangles
 			for(var button = 0; button < navButtons.length; button++){
-				console.log("testing");
 				navButtons[button].style.height = '50px';
 				navButtons[button].style.borderRadius = '25px';
 			}
 		}
     }else{
     	//if the window is SMALLER than 751px, this will fire
-    	if(bool){
+    	if(previousButtonID == 'home' && isWindoResize){
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
     		document.getElementById('about-me').style.top = '80px';
@@ -42,8 +40,7 @@ function changeButtonLocation(bool){
 
 			//loop through and set nav buttons to circles
 			for(var button = 0; button < navButtons.length; button++){
-				console.log("testing");
-				navButtons[button].style.height = '125px';
+				navButtons[button].style.height = '100px';
 				navButtons[button].style.borderRadius = '100%';
 			}
 
@@ -56,7 +53,6 @@ function changeButtonLocation(bool){
 			
 			//loop through and set nav buttons to rectangles
 			for(var button = 0; button < navButtons.length; button++){
-				console.log("testing");
 				navButtons[button].style.height = '50px';
 				navButtons[button].style.borderRadius = '25px';
 			}
@@ -75,11 +71,21 @@ function resetButtonLocation(){
 		document.getElementById('about-me').style.top = '70px';
 		document.getElementById('skills').style.top = '0px';
 		document.getElementById('projects').style.top = '70px';
+	
+		for(var button = 0; button < navButtons.length; button++){
+				navButtons[button].style.height = '125px';
+				navButtons[button].style.borderRadius = '100%';
+		}
 	}else{
 		//if the window is SMALLER than 751px, this will fire
 		document.getElementById('about-me').style.top = '80px';
 		document.getElementById('skills').style.top = '-70px';
 		document.getElementById('projects').style.top = '-120px';
+
+		for(var button = 0; button < navButtons.length; button++){
+				navButtons[button].style.height = '100px';
+				navButtons[button].style.borderRadius = '100%';
+		}
 	}	
 	previousButtonID = 'home';
 }
@@ -87,7 +93,7 @@ function resetButtonLocation(){
 
 window.onresize = function(event) {
 	//if window resizes, this will run
-	changeButtonLocation(false);
+	changeButtonLocation(true);
 };
 
 
@@ -110,11 +116,8 @@ function NavbarClick(id, idNum){
 	}
 
 	//changes the buttons location
-	if(previousButtonID == 'home'){
-		changeButtonLocation(true);
-	}else{
 		changeButtonLocation(false);
-	}
+
 	//previous button is set to the button that was clicked
 	previousButtonID = id;
 }
