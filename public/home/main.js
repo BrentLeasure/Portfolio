@@ -1,49 +1,5 @@
 var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'];
 
-function changeButtonLocation(isWindoResize){
-	if(window.innerWidth > 751){
-    	//if the window is BIGGER than 751px, this will fire
-    	if(previousButtonID == 'home' && isWindoResize){
-    		//If the home button was clicked last, then it will adjust the 
-    		//location of the buttons as if they were on the main page
-	    	document.getElementById('about-me').style.top = '70px';
-			document.getElementById('skills').style.top = '0px';
-			document.getElementById('projects').style.top = '70px';
-
-			toCircle();
-
-		}else{
-			//If the home button was NOT clicked last, then it will adjust the 
-    		//location of the buttons as if they were NOT on the main page
-			document.getElementById('about-me').style.top = '10px';
-			document.getElementById('skills').style.top = '10px';
-			document.getElementById('projects').style.top = '10px';
-
-			toRectagle();
-		}
-    }else{
-    	//if the window is SMALLER than 751px, this will fire
-    	if(previousButtonID == 'home' && isWindoResize){
-    		//If the home button was clicked last, then it will adjust the 
-    		//location of the buttons as if they were on the main page
-    		document.getElementById('about-me').style.top = '80px';
-			document.getElementById('skills').style.top = '-70px';
-			document.getElementById('projects').style.top = '-120px';
-
-			toCircle();
-    	}else{
-    		//If the home button was NOT clicked last, then it will adjust the 
-    		//location of the buttons as if they were NOT on the main page
-    		document.getElementById('about-me').style.top = '10px';
-			document.getElementById('skills').style.top = '-40px';
-			document.getElementById('projects').style.top = '-89px';
-			
-			toRectagle();
-    	}
-    }
-}
-
-
 function resetButtonLocation(){
 	//if the home button is clicked, then this will fire 
 	//and reset all the buttons background colors to black

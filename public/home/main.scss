@@ -2,7 +2,7 @@
 @import '../scss/extenders';
 @import '../scss/variables';
 @import 'scss-navigation/navigation';
-@import 'scss-pageLayoutpageLayout';
+@import 'scss-pageLayout/pageLayout';
 
 
 //===================================================
@@ -14,6 +14,15 @@
 	}
 	to{
 		opacity: 1;
+	}
+}
+
+@keyframes fadeOut{
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0;
 	}
 }
 
@@ -113,6 +122,8 @@ body{
 			@include grayscale(100%);
 		}
 		.col{
+			@include transition(display .5s);
+			@include animation(fadeOut .5s);
 			.volunteer-img{
 				@include heightWidth(150px, 150px);
 
