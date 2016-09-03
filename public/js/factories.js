@@ -25,10 +25,10 @@ function toCircle(){
 	}
 }
 
-function changeButtonLocation(isWindoResize){
+function changeButtonLocation(isWindowResize){
 	if(window.innerWidth > 751){
     	//if the window is BIGGER than 751px, this will fire
-    	if(previousButtonID == 'home' && isWindoResize){
+    	if(previousButtonID == 'home' && isWindowResize){
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
 	    	document.getElementById('about-me').style.top = '70px';
@@ -48,7 +48,7 @@ function changeButtonLocation(isWindoResize){
 		}
     }else{
     	//if the window is SMALLER than 751px, this will fire
-    	if(previousButtonID == 'home' && isWindoResize){
+    	if(previousButtonID == 'home' && isWindowResize){
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
     		document.getElementById('about-me').style.top = '80px';

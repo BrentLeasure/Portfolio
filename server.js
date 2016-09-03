@@ -8,7 +8,7 @@ server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static(__dirname + "/public"));
 
 server.get("/", function(req, res){
-	res.sendFile("/main.html", {root: "./public/home"})
+	res.sendFile("/main.html", {root: "./public/html"})
 });
 
 

@@ -1,8 +1,8 @@
-@import '../scss/mixins';
-@import '../scss/extenders';
-@import '../scss/variables';
-@import 'scss-navigation/navigation';
-@import 'scss-pageLayout/pageLayout';
+@import 'directives/mixins';
+@import 'directives/extenders';
+@import 'directives/variables';
+@import 'navigation';
+@import 'page-layout';
 
 
 //===================================================
@@ -123,7 +123,6 @@ body{
 		}
 		.col{
 			@include transition(display .5s);
-			@include animation(fadeOut .5s);
 			.volunteer-img{
 				@include heightWidth(150px, 150px);
 

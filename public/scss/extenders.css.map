@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,UAAU;EACT,UAAU,EAAE,IAAI;;AAIjB,UAAU;EACT,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;;AAMZ,eAAe;EACd,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;;AAGnB,QAAQ;EACP,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,GAAG",
-"sources": ["extenders.scss"],
-"names": [],
-"file": "extenders.css"
-}
