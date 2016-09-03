@@ -1,6 +1,7 @@
 var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'];
 
 function resetButtonLocation(){
+	
 	//if the home button is clicked, then this will fire 
 	//and reset all the buttons background colors to black
 	document.getElementById(previousButtonID).style.backgroundColor = "black";
@@ -22,17 +23,21 @@ function resetButtonLocation(){
 		toCircle();
 	}	
 	previousButtonID = 'home';
+	
 }
 
 
 window.onresize = function(event) {
+	
 	//if window resizes, this will run
 	changeButtonLocation(true);
+	
 };
 
 
 
 function NavbarClick(id, idNum){
+	
 	if(previousButtonID == "home"){
 		//if previous button is 'home', then there is no previous button to reset
 		//this will fire and only set a button's background color
@@ -55,9 +60,11 @@ function NavbarClick(id, idNum){
 
 	//previous button is set to the button that was clicked
 	previousButtonID = id;
+	
 }
 
 function ActivatePage(id){
+	
 		if(id != 'pageOne'){
 			//If not on page one, the home button is set to visible
 			document.getElementById('home-button').style.visibility = 'visible';
@@ -72,4 +79,5 @@ function ActivatePage(id){
 
 	//previous button is set to the button that was clicked
 	previousPageID = id;
+	
 }

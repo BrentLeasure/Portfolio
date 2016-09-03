@@ -1,13 +1,17 @@
 var navButtons = document.getElementsByClassName('nav-buttons');
+
 function toRectagle(){
+
 	//loop through and set nav buttons to rectangles
 	for(var button = 0; button < navButtons.length; button++){
 		navButtons[button].style.height = '50px';
 		navButtons[button].style.borderRadius = '25px';
 	}
+
 }
 
 function toCircle(){
+
 	if(window.innerWidth > 751){
 		//loop through and set nav buttons to circles
 		for(var button = 0; button < navButtons.length; button++){
@@ -23,9 +27,11 @@ function toCircle(){
 			navButtons[button].style.margin = '0px 0px 0px';
 		}
 	}
+
 }
 
 function changeButtonLocation(isWindowResize){
+
 	if(window.innerWidth > 751){
     	//if the window is BIGGER than 751px, this will fire
     	if(previousButtonID == 'home' && isWindowResize){
@@ -66,17 +72,17 @@ function changeButtonLocation(isWindowResize){
 			toRectagle();
     	}
     }
+
 }
 
 
 function FocusAboutMe(selectedColumn){
+
 	var aboutMeColumns = document.getElementsByClassName('col');
 	for(var column = 0; column < aboutMeColumns.length; column ++){
 		if(column != selectedColumn){
 			aboutMeColumns[column].style.display = 'none';
 		}
 	}
-	// setTimeout(function(){
 
-	// }, 1000);
 }
