@@ -9,10 +9,10 @@
 <div id="content">
 	<!-- nav bar -->
 	<div id="navigation">
-			<button onclick="resetButtonLocation(); ActivatePage('pageOne')" id="home-button">home</button>
-			<button onclick= "NavbarClick('about-me', 0); ActivatePage('pageFour');" id="about-me" class="nav-buttons active-button">About Me</button>
-			<button onclick= "NavbarClick('skills', 1); ActivatePage('pageTwo');" id="skills" class="right-border nav-buttons">Skills</button>
-			<button onclick= "NavbarClick('projects', 2); ActivatePage('pageThree');" id="projects" class="nav-buttons">Projects</button>
+			<button onclick="resetButtonLocation(); SetActiveClass( 0, 'pages' )" id="home-button">home</button>
+			<button onclick= "NavbarClick('about-me', 0); SetActiveClass( 3, 'pages' );" id="about-me" class="nav-buttons active-button">About Me</button>
+			<button onclick= "NavbarClick('skills', 1); SetActiveClass( 1, 'pages' );" id="skills" class="right-border nav-buttons">Skills</button>
+			<button onclick= "NavbarClick('projects', 2); SetActiveClass( 2, 'pages' );" id="projects" class="nav-buttons">Projects</button>
 	</div>
 
 	<!-- my Profile -->
@@ -55,23 +55,36 @@
 		<center>
 			<img class="profile-pic" id="me" src="/../photos/me.png">
 			<h2><u>Brent Leasure</u></h2>
-			<div onclick="FocusAboutMe(0)" class="col">
+			<div onclick="SetActiveClass( 0, 'info-sections' )" class="col">
 				<center>
 					<h3><u>Background</u></h3>
-					<p>Hello! My name is Brent Leasure. I'm a junior developer currently working as a Wordpress Developer in Colorado Springs. I love to learn and I love to code.</p>
 				</center>
-			</div>
-
-			<div onclick="FocusAboutMe(1)" class="col">
+			</div>	
+			<div onclick="SetActiveClass( 1, 'info-sections' )" class="col">
 				<center>
 					<h3><u>Philanthropy</u></h3>
+				</center>					
+			</div>	
+			<div onclick="SetActiveClass( 2, 'info-sections' )"class="col">
+				<center>
+					<h3><u>Hobbies</u></h3>
+				</center>
+			</div>
+			<div class='info-sections'>						
+				<center>
+					<p>Hello! My name is Brent Leasure. I'm a junior developer with professional exposure in HTML5, CSS3, JavaScript (ES5 & ES6), Wordpress and PHP.</p><p>I also have experience using SCSS, Babel, Gulp, Angular, Express Nodejs and Java.</p>
+				</center>
+			</div>				
+			
+
+
+			<div class='info-sections'>
+				<center>
 					<p>In my spare time, I volunteer with the Colorado Springs Humane Society.</p>
 				</center>
 			</div>
-
-			<div onclick="FocusAboutMe(2)"class="col">
+			<div class='info-sections'>
 				<center>
-					<h3><u>Hobbies</u></h3>
 					<p>I'm always trying to find new and exciting adventures to keep me active. My hobbies include hiking, climbing, skiing and film. I also love beer.</p>
 				</center>
 			</div>

@@ -5,21 +5,26 @@
 //================================================
 //page layout
 //================================================
-
+	.info-sections {
+		display: none;
+	}
+	
 	.pages{
 		@include center(100%);
 		display: none;
 		margin-top: 150px;
 	}
 
-	.active{
-		display: inline-block;
+	.active {
+		display: block;
 		@include animation(fadeIn .5s);
 	}
 
 	.profile-pic{
 		@include heightWidth(200px, 200px);	
+		border: black solid px;
 		border-radius: 100%;
 		margin: 0 auto;
 		display: block;
+		z-index: 999;
 	}	

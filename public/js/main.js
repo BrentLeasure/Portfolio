@@ -56,28 +56,31 @@ function NavbarClick(id, idNum){
 	}
 
 	//changes the buttons location
-		changeButtonLocation(false);
+	changeButtonLocation(false);
 
 	//previous button is set to the button that was clicked
 	previousButtonID = id;
 	
 }
 
-function ActivatePage(id){
-	
-		if(id != 'pageOne'){
-			//If not on page one, the home button is set to visible
+function SetActiveClass( selectedSection, className ) {
+
+	if ( 'pages' == className ) {
+		if( 0 != selectedSection ) {
 			document.getElementById('home-button').style.visibility = 'visible';
-		}else{
-			//If on page one, the home button is set to hidden
+		} else {
 			document.getElementById('home-button').style.visibility = 'hidden';
 		}
-		//all buttons get 'active' class removed
-		document.getElementById(previousPageID).classList.remove("active");
-		//button clicked gets 'active' class added
-		document.getElementById(id).classList.add("active");
+	}
 
-	//previous button is set to the button that was clicked
-	previousPageID = id;
-	
+	var sections = document.getElementsByClassName( className );
+
+	for ( var section = 0; section < sections.length; section++ ) {
+		if ( section == selectedSection ) {
+			sections[ section ].classList.add('active');
+		} else {
+			sections[ section ].classList.remove('active');
+		}
+	}
+
 }
