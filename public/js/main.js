@@ -63,8 +63,8 @@ function NavbarClick( id, idNum ) {
 	
 }
 
-function SetActiveClass( selectedSection, className ) {
-
+function SetClass( selectedSection, className, theClass ) {
+	console.log( selectedSection + ' ' + theClass );
 	if ( 'pages' == className ) {
 		if( 0 != selectedSection ) {
 			document.getElementById('home-button').style.visibility = 'visible';
@@ -77,9 +77,9 @@ function SetActiveClass( selectedSection, className ) {
 
 	for ( var section = 0; section < sections.length; section++ ) {
 		if ( section == selectedSection ) {
-			sections[ section ].classList.add('active');
+			sections[ section ].classList.add( theClass );
 		} else {
-			sections[ section ].classList.remove('active');
+			sections[ section ].classList.remove( theClass );
 		}
 	}
 

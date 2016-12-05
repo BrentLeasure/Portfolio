@@ -9,10 +9,10 @@
 <div id="content">
 	<!-- nav bar -->
 	<div id="navigation">
-			<button onclick="resetButtonLocation(); SetActiveClass( 0, 'pages' )" id="home-button">home</button>
-			<button onclick= "NavbarClick('about-me', 0); SetActiveClass( 3, 'pages' );" id="about-me" class="nav-buttons active-button">About Me</button>
-			<button onclick= "NavbarClick('skills', 1); SetActiveClass( 1, 'pages' );" id="skills" class="right-border nav-buttons">Skills</button>
-			<button onclick= "NavbarClick('projects', 2); SetActiveClass( 2, 'pages' );" id="projects" class="nav-buttons">Projects</button>
+			<button onclick="resetButtonLocation(); SetClass( 0, 'pages', 'active' )" id="home-button">home</button>
+			<button onclick= "NavbarClick('about-me', 0); SetClass( 3, 'pages', 'active' );" id="about-me" class="nav-buttons active-button">About Me</button>
+			<button onclick= "NavbarClick('skills', 1); SetClass( 1, 'pages', 'active' );" id="skills" class="right-border nav-buttons">Skills</button>
+			<button onclick= "NavbarClick('projects', 2); SetClass( 2, 'pages', 'active' );" id="projects" class="nav-buttons">Projects</button>
 	</div>
 
 	<!-- my Profile -->
@@ -52,32 +52,29 @@
 	</div>
 
 	<div id="pageFour" class="pages">
-		<center>
 			<img class="profile-pic" id="me" src="/../photos/me.png">
-			<h2><u>Brent Leasure</u></h2>
-			<button onclick="SetActiveClass( 0, 'info-sections' )" class="info-section-buttons">
+			<center><h2><u>Brent Leasure</u></h2></center>
+			<button onclick="SetClass( 0, 'info-sections', 'active' ); SetClass( 0, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">
 				<center>
-					<h3><u>Background</u></h3>
+					<h3>Background</h3>
 				</center>
 			</button>	
-			<button onclick="SetActiveClass( 1, 'info-sections' )" class="info-section-buttons">
+			<button onclick="SetClass( 1, 'info-sections', 'active' ); SetClass( 1, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">
 				<center>
-					<h3><u>Philanthropy</u></h3>
+					<h3>Philanthropy</h3>
 				</center>					
 			</button>	
-			<button onclick="SetActiveClass( 2, 'info-sections' )"class="info-section-buttons">
+			<button onclick="SetClass( 2, 'info-sections', 'active' ); SetClass( 2, 'info-section-buttons', 'active-page-button' )"class="info-section-buttons">
 				<center>
-					<h3><u>Hobbies</u></h3>
+					<h3>Hobbies</h3>
 				</center>
 			</button>
+
 			<div class='info-sections'>						
 				<center>
 					<p>Hello! My name is Brent Leasure. I'm a junior developer with professional exposure in HTML5, CSS3, JavaScript (ES5 & ES6), Wordpress and PHP.</p><p>I also have experience using SCSS, Babel, Gulp, Angular, Express Nodejs and Java.</p>
 				</center>
 			</div>				
-			
-
-
 			<div class='info-sections'>
 				<center>
 					<p>In my spare time, I volunteer with the Colorado Springs Humane Society.</p>
@@ -88,8 +85,6 @@
 					<p>I'm always trying to find new and exciting adventures to keep me active. My hobbies include hiking, climbing, skiing and film. I also love beer.</p>
 				</center>
 			</div>
-
-		</center>
 	</div>
 </div>
 

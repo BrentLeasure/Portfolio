@@ -20,6 +20,11 @@
 		@include animation(fadeIn .5s);
 	}
 
+	.active-page-button {
+		background: $secondaryColor !important;
+		color: $backgroundColor !important;
+	}
+
 	.profile-pic{
 		@include heightWidth(200px, 200px);	
 		border: black solid px;

@@ -21,10 +21,10 @@
 		left: 215px;
 		visibility: hidden;
 		background-color: $backgroundColor;
-		color: $fontColor;
+		color: $secondaryColor;
 
 		&:hover{
-			background-color: $fontColor;
+			background-color: $secondaryColor;
 			color: $backgroundColor;
 		}
 
@@ -41,7 +41,7 @@
 		@extend .circle-buttons;
 
 		background-color: $backgroundColor;
-		color: $fontColor;
+		color: $secondaryColor;
 		position: relative;
 
 		&:hover{
