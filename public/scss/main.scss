@@ -122,26 +122,20 @@ body{
 			@include grayscale(100%);
 		}
 		
-		.col{
-			@include transition(display .5s);
-			.volunteer-img{
-				@include heightWidth(150px, 150px);
-
-				@media all and (max-width: $smallScreen){
-					@include heightWidth(50px, 50px);
-					margin-bottom: 10px;
-				}
-			}
+		.info-section-buttons {
 			float: left;
 			width: 31%;
 			margin: 0% 1% 0%;
 		}
 
-	}
-	@media screen and (max-width: $smallScreen){
-		padding: 0px 5px 0px;
-		.col{
-			font-size: $fontSizeSmall;
+		@media screen and (max-width: $smallScreen) {
+
+			padding: 0px 5px 0px;
+
+			.info-section-buttons {
+				font-size: $fontSizeSmall;
+			}
+
 		}
 	}
 }
