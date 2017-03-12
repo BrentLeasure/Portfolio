@@ -67,15 +67,21 @@ body{
 			border-radius: 100%;
 			
 			@media screen and (max-width: $smallScreen){
-				position: relative;
-				top: 60px;
-				right: 10px;
+			    position: relative;
+    			top: 60px;
+    			width: 200px;
+   				height: 200px;
 			}
 		}
 
 		#mainInfo{
+			position:relative;
 			@include heightWidth(50px, 200px);	
 			margin: 0 auto;
+
+			@media screen and (max-width: $smallScreen){
+				bottom: 40px;
+			}
 		}
 
 		.git-in{
@@ -86,6 +92,9 @@ body{
 
 		#git{
 			margin: 0px 55px 0px 30px;
+			@media screen and (max-width: $smallScreen){
+				margin: 0px 10px 0 55px;
+			}
 		}
 	}
 
