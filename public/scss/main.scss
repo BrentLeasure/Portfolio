@@ -65,9 +65,11 @@ body{
 			@include heightWidth(300px, 300px);
 			border: 5px solid $secondaryColor;
 			border-radius: 100%;
+			
 			@media screen and (max-width: $smallScreen){
 				position: relative;
-				top: 50px;
+				top: 60px;
+				right: 10px;
 			}
 		}
 

@@ -64,7 +64,7 @@ function NavbarClick( id, idNum ) {
 }
 
 function SetClass( selectedSection, className, theClass ) {
-	console.log( selectedSection + ' ' + theClass );
+	
 	if ( 'pages' == className ) {
 		if( 0 != selectedSection ) {
 			document.getElementById('home-button').style.visibility = 'visible';

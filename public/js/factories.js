@@ -33,7 +33,7 @@ function toCircle() {
 function changeButtonLocation( isWindowResize ) {
 
 	if ( window.innerWidth > 751 ) {
-    	//if the window is BIGGER than 751px, this will fire
+    	//if the window is bigger than 751px, this will fire
     	if ( previousButtonID == 'home' && isWindowResize ) {
     		//If the home button was clicked last, then it will adjust the 
     		//location of the buttons as if they were on the main page
