@@ -109,8 +109,6 @@ body{
 			.skillbox{
 				@include heightWidth(150px, 150px);
 				@include transition(border-radius .5s);
-				@include animation(pulse 1s infinite);
-				animation-direction: alternate;
 				@include grayscale(100%);
 				border: 5px solid $backgroundColor;
 				margin: 1% 6.5% 1%;
@@ -124,6 +122,10 @@ body{
 					margin: 1% 2% 1%;
 				}
 
+			}
+			.pulse {
+				@include animation(pulse 1s infinite);
+				animation-direction: alternate;
 			}
 		}
 	}
