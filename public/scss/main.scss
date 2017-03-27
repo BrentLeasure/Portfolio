@@ -123,10 +123,6 @@ body{
 				}
 
 			}
-			.pulse {
-				@include animation(pulse 1s infinite);
-				animation-direction: alternate;
-			}
 		}
 	}
 

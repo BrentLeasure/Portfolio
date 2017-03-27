@@ -74,3 +74,31 @@ function changeButtonLocation( isWindowResize ) {
     }
 
 }
+
+function addAnimation( name, nodeNum = false, animation, direction = false ) {
+
+	if ( nodeNum !== false ) {
+		document.getElementsByClassName(name)[nodeNum].style.WebkitAnimation = animation;
+		document.getElementsByClassName(name)[nodeNum].style.animation = animation;
+
+		if ( direction ) {
+			document.getElementsByClassName(name)[nodeNum].style.animationDirection = direction;
+		}
+	} else {
+		document.getElementById(name).style.WebkitAnimation = animation;
+		document.getElementById(name).style.animation = animation;
+
+		if ( direction ) {
+			document.getElementById(name).style.animationDirection = direction;		
+		}	
+	}
+
+}
+
+function removeAllStyles( name, nodeNum = false) {
+	if ( nodeNum !== false ) {
+		document.getElementsByClassName(name)[nodeNum].removeAttribute('style');
+	} else {
+		document.getElementById(name).style.removeAttribute('style');
+	}
+}
