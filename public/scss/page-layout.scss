@@ -7,8 +7,32 @@
 //================================================
 	.info-sections {
 		display: none;
+
+		.history-line {
+			position: absolute;
+			width: 50%;
+			border-right: 1px solid white;
+			height: 95%;
+		}
+
+		.history-events {
+			height: 100%;
+			.history-events-list li {
+				width: 40%;
+				margin: 6%;
+				list-style: none;
+			}
+			.history-events-list li:nth-child(odd) {
+				float: left;
+			}
+
+			.history-events-list li:nth-child(even) {
+				float: right;
+			}
+		}
 	}
-	
+
+
 	.pages{
 		@include center(100%);
 		display: none;
@@ -17,6 +41,7 @@
 
 	.active {
 		display: block;
+		height: 100%;
 		@include animation(fadeIn .5s);
 	}
 

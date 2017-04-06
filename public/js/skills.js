@@ -4,8 +4,8 @@ let skillsLength = skillBoxArray.length;
 
 window.onload = function() { 	
 
-	while ( randomNumArray.length != 11 ) {
-		randomNum = Math.floor(Math.random() * 11);
+	while ( randomNumArray.length != skillsLength ) {
+		randomNum = Math.floor(Math.random() * skillsLength);
 		
 		if( randomNumArray.indexOf(randomNum) == -1 ) {
 			randomNumArray.push(randomNum);
@@ -22,10 +22,10 @@ function pulseLoop() {
 		
 	i++;
 	
-	if( i >= 11 ) {
+	if( i >= skillsLength ) {
 		i = 0;
 		j = 0;
-		for ( let k = 0; k < 11; k++ ) {
+		for ( let k = 0; k < skillsLength; k++ ) {
 			removeAllStyles( 'skillBox', randomNumArray[k] );
 		}
 
@@ -49,7 +49,7 @@ function removePulse() {
 
 	j++;
 
-	if( j >= 11 ) {
+	if( j >= skillsLength ) {
 		j = 0;
 	}
 }

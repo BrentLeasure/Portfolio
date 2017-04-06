@@ -65,6 +65,7 @@ function NavbarClick( id, idNum ) {
 
 function SetClass( selectedSection, className, theClass ) {
 	
+	//Only used for the main nav buttons: If we're not on the main page, then the home button appears
 	if ( 'pages' == className ) {
 		if( 0 != selectedSection ) {
 			document.getElementById('home-button').style.visibility = 'visible';
@@ -73,8 +74,9 @@ function SetClass( selectedSection, className, theClass ) {
 		}
 	}
 
-	var sections = document.getElementsByClassName( className );
+	let sections = document.getElementsByClassName( className );
 
+	console.log(selectedSection);
 	for ( var section = 0; section < sections.length; section++ ) {
 		if ( section == selectedSection ) {
 			sections[ section ].classList.add( theClass );
