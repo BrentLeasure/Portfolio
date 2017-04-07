@@ -150,6 +150,12 @@ body{
 
 				padding: 0px 5px 0px;
 				font-size: $fontSizeSmall;
+			}
+
+			@media screen and(max-width: $smallScreen) {
+				h3 {
+					font-size: 8px;
+				}
 			}	
 		}
 
