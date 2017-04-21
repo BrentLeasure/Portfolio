@@ -1,5 +1,5 @@
 var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'];
-
+ 
 function resetButtonLocation() {
 	
 	//if the home button is clicked, then this will fire 
@@ -76,7 +76,6 @@ function SetClass( selectedSection, className, theClass ) {
 
 	let sections = document.getElementsByClassName( className );
 
-	console.log(selectedSection);
 	for ( var section = 0; section < sections.length; section++ ) {
 		if ( section == selectedSection ) {
 			sections[ section ].classList.add( theClass );

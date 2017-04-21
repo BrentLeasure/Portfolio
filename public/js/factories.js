@@ -102,3 +102,5 @@ function removeAllStyles( name, nodeNum = false) {
 		document.getElementById(name).style.removeAttribute('style');
 	}
 }
+
+

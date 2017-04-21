@@ -15,7 +15,7 @@ window.onload = function() {
 	
 	removePulse();
 }
-
+ 
 function pulseLoop() {
 
 	addAnimation( 'skillBox', randomNumArray[i], 'pulse 1.5s', 'alternate' );

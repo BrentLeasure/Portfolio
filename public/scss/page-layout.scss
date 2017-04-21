@@ -2,103 +2,113 @@
 @import 'directives/extenders';
 @import 'directives/variables';
 
-//================================================
-//page layout
-//================================================
-	.info-sections {
-		display: none;
+/*================================================
+		About Me Info Sections
+==================================================*/
+.info-sections {
+	display: none;
 
-		.history-line {
-			position: absolute;
-			width: 50%;
-			border-right: 1px dashed white;
-			height: 95%;
+	.history-line {
+		position: absolute;
+		width: 50%;
+		border-right: 1px dashed white;
+		height: 95%;
 
-			@media screen and(max-width: $smallScreen) {
-				width: 60%;
-			}
-		}
-
-		.history-events {
-			height: 100%;
-			.history-events-list li {
-				width: 40%;
-				margin: 6%;
-				list-style: none;
-
-				@media screen and(max-width: $smallScreen) {
-					font-size: 10px;
-				}
-			}
-			.history-events-list li:nth-child(odd) {
-				float: left;
-			}
-
-			.history-events-list li:nth-child(even) {
-				float: right;
-			}
-		}
-
-		.coding-events-list {
-			li {
-				list-style: none;
-			}
-
-			.coding-events-images {
-				max-width: 100%;
-				max-height: 300px;
-			}
-		}
-
-		.activities-container {
-			@include flexBox();
-			flex-wrap: wrap;
-
-			.activity-image-container {
-
-				position: relative;
-				height: 200px;
-				width: 33%;
-
-				.activity-images {
-					@include flex(1);
-
-					position: absolute;
-					left: 50%;
-					top: 50%;
-					transform: translate( -50%, -50% );
-					height: 100%;
-					max-height: 200px;
-					transition: width .5s, border .5s;
-				}
-
-				.activity-image-first {
-					width: 100%;
-				}
-
-				.activity-image-second {
-					width: 0px;
-				}
-
-				.will-be-hover {
-
-					.activity-image-first {
-						width: 0px;
-					}
-
-					.activity-image-second {
-						width: 100%;
-					}	
-				}
-
-				@media screen and ( max-width: $smallScreen ) {
-					width: 100%;
-					flex-direction: column;
-				}
-			}
+		@media screen and(max-width: $mobileScreen) {
+			width: 56%;
 		}
 	}
 
+	.history-events {
+		height: 100%;
+		#history-events-list {
+			overflow: hidden;
+		}
+		#history-events-list li {
+			width: 40%;
+			margin: 6%;
+			list-style: none;
+
+			@media screen and(max-width: $smallScreen) {
+				font-size: 10px;
+			}
+		}
+		#history-events-list li:nth-child(odd) {
+			transition: transform 1s;
+			transform:  translateX( -150% );
+		}
+
+		#history-events-list li:nth-child(even) {
+			transition: transform 1s;
+			transform: translateX( 235% );
+		}
+	}
+
+	.coding-events-list {
+		li {
+			list-style: none;
+		}
+
+		.coding-events-images {
+			max-width: 100%;
+			max-height: 300px;
+		}
+	}
+
+	.activities-container {
+		@include flexBox();
+		flex-wrap: wrap;
+
+		.activity-image-container {
+
+			position: relative;
+			height: 200px;
+			width: 33%;
+			border: 1px solid;
+
+			.activity-images {
+				@include flex(1);
+				backface-visibility: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				transition: .6s;
+			}
+
+			.activity-image-first {
+				transform: rotateY(0deg);
+			}
+
+			.activity-image-second {
+				transform: rotateY(180deg);
+			}
+
+			&:hover {
+
+				.activity-image-first {
+					transform: rotateY(180deg);
+				}
+
+				.activity-image-second {
+					transform: rotateY(0deg);
+				}	
+			}
+
+			@media screen and ( max-width: $smallScreen ) {
+				width: 100%;
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+
+
+/*================================================
+			Page Layout
+==================================================*/
 
 	.pages{
 		@include center(100%);
