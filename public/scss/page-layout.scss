@@ -70,29 +70,32 @@
 				@include flex(1);
 				backface-visibility: hidden;
 				position: absolute;
+				overflow: hidden;
 				left: 0;
 				top: 0;
 				height: 100%;
 				width: 100%;
-				transition: .6s;
+				transition: .6s ease-in-out;
+				background: black;
 			}
 
 			.activity-image-first {
-				transform: rotateY(0deg);
+				@include transform( rotateY(0deg) );
 			}
 
 			.activity-image-second {
-				transform: rotateY(180deg);
+				@include transform( rotateY(180deg) );
 			}
 
 			&:hover {
 
 				.activity-image-first {
-					transform: rotateY(180deg);
+					@include transform( rotateY(180deg) );
 				}
 
 				.activity-image-second {
-					transform: rotateY(0deg);
+					@include transform( rotateY(0deg) );
+					z-index: 1;
 				}	
 			}
 
