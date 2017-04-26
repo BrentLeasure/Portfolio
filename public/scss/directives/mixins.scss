@@ -4,6 +4,13 @@
 	-webkit-transition: $transition;
 }
 
+@mixin backfaceVisibility( $backface ) {
+		-webkit-backface-visibility: $backface;
+     	-moz-backface-visibility: $backface;
+		-o-backface-visibility:  $backface;
+	    backface-visibility: $backface;
+}
+
 @mixin transformLine($translateX, $translateY, $rotate){
 	transform: 
 		translateY($translateY)

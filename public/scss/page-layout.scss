@@ -68,16 +68,18 @@
 
 			.activity-images {
 				@include flex(1);
-				backface-visibility: hidden;
 				position: absolute;
 				overflow: hidden;
 				left: 0;
 				top: 0;
 				height: 100%;
 				width: 100%;
+				-webkit-transition: .6s ease-in-out;
 				transition: .6s ease-in-out;
 				background: black;
-			}
+
+				@include backfaceVisibility( hidden );
+	     	}
 
 			.activity-image-first {
 				@include transform( rotateY(0deg) );
