@@ -16,6 +16,23 @@ body{
     padding: 0;
 }
 
+ul {
+	padding-left: 0;	
+}
+
+.pages {
+
+	h2 {
+		text-align: center;
+		text-decoration: underline;
+	}
+
+	h3 {
+		text-align: center;
+	}	
+
+}
+
 #content{
 	@include animation(fadeIn .5s);
 	padding: 20px 50px 0px;
@@ -137,7 +154,7 @@ body{
 		.info-sections {
 			z-index: 9;
 			position: relative;
-			top: 65px;
+			clear: both;
 		}
 	}
 }

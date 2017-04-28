@@ -13,10 +13,6 @@
 		width: 50%;
 		border-right: 1px dashed white;
 		height: 95%;
-
-		@media screen and(max-width: $mobileScreen) {
-			width: 56%;
-		}
 	}
 
 	.history-events {
@@ -35,12 +31,12 @@
 		}
 		#history-events-list li:nth-child(odd) {
 			transition: transform 1s;
-			transform:  translateX( -150% );
+			transform:  translateX( -170% );
 		}
 
 		#history-events-list li:nth-child(even) {
 			transition: transform 1s;
-			transform: translateX( 235% );
+			transform: translateX( 250% );
 		}
 	}
 
@@ -106,6 +102,12 @@
 				flex-direction: column;
 			}
 		}
+	}
+
+	#end-of-history {
+		opacity: 0;
+		-webkit-transition: .6s ease-in-out;
+		transition: .6s ease-in-out;
 	}
 }
 
