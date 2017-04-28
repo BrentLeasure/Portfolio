@@ -75,6 +75,10 @@
 				background: black;
 
 				@include backfaceVisibility( hidden );
+
+				p {
+					text-align: center;
+				}
 	     	}
 
 			.activity-image-first {
