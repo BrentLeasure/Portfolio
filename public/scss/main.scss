@@ -90,8 +90,10 @@ ul {
 		width: 100%;
 
 		#page-two-section{ 
-			display: block;
-			padding-left: 9%;
+			@include flexBox();
+			@include flexDirection();
+			@include flexWrap(wrap);
+			@include justifyContent(center); 
 		
 
 			.skillbox{

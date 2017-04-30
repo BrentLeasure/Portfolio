@@ -12,14 +12,16 @@
 		position: absolute;
 		width: 50%;
 		border-right: 1px dashed white;
-		height: 95%;
+		height: 100%;
 	}
 
 	.history-events {
-		height: 100%;
+		min-height: 100%;
+		display: block;
 		#history-events-list {
 			overflow: hidden;
 		}
+
 		#history-events-list li {
 			width: 40%;
 			margin: 6%;
@@ -29,6 +31,7 @@
 				font-size: 10px;
 			}
 		}
+
 		#history-events-list li:nth-child(odd) {
 			transition: transform 1s;
 			transform:  translateX( -170% );
@@ -41,6 +44,12 @@
 	}
 
 	.coding-events-list {
+		
+		@include flexBox();
+		@include flexDirection();
+		@include flexWrap(wrap);
+		@include justifyContent(center);
+
 		li {
 			list-style: none;
 		}
@@ -58,18 +67,13 @@
 		.activity-image-container {
 
 			position: relative;
-			height: 200px;
+			min-height: 250px;
 			width: 33%;
 			border: 1px solid;
 
 			.activity-images {
-				@include flex(1);
 				position: absolute;
-				overflow: hidden;
-				left: 0;
-				top: 0;
 				height: 100%;
-				width: 100%;
 				-webkit-transition: .6s ease-in-out;
 				transition: .6s ease-in-out;
 				background: black;
@@ -79,6 +83,12 @@
 				p {
 					text-align: center;
 				}
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+
 	     	}
 
 			.activity-image-first {

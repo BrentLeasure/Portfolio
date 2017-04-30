@@ -52,28 +52,36 @@
 	<div id="pageFour" class="pages">
 			<img class="profile-pic" id="me" src="/../photos/me.png">			
 			<h2>Brent Leasure</h2>
-			<button onclick="SetClass( 0, 'info-sections', 'active' ); SetClass( 0, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">				
-					<h3>Journey So Far</h3>			
+			<button onclick="EnterHistoryElements(); SetClass( 0, 'info-sections', 'active' ); SetClass( 0, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">		
+				<h3>Journey So Far</h3>			
 			</button>	
-			<button onclick="SetClass( 1, 'info-sections', 'active' ); SetClass( 1, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">				
-					<h3>Community Coding</h3>
-									
+			<button onclick="SetClass( 1, 'info-sections', 'active' ); SetClass( 1, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">	
+				<h3>Community Coding</h3>		
 			</button>	
-			<button onclick="SetClass( 2, 'info-sections', 'active' ); SetClass( 2, 'info-section-buttons', 'active-page-button' )"class="info-section-buttons">				
-					<h3>Who I am</h3>
-				
+			<button onclick="SetClass( 2, 'info-sections', 'active' ); SetClass( 2, 'info-section-buttons', 'active-page-button' )" class="info-section-buttons">	
+				<h3>Who I am</h3>
 			</button>
 
 			<div class='info-sections'>										
-					<h2>Becoming a coder</h2>
-				
-				<div class="history-line"></div>
+				<h2>Becoming a coder</h2>
 				<div class="history-events">
+					<div class="history-line"></div>
 					<ul id="history-events-list">
-						<li>I studied Environmental Science and GIS at UCCS. In my last few semesters, I realized I wanted to code. I took 3 semesters of programming courses and through my journey, I decided web development was my favorite.</li>
-						<li>I looked into some programming courses, and found a neat little technical school called RefactorU. The course was short, but I learned a lot from it.</li>
-						<li>After a year of picking up random gigs, I became a part of a small company up in the Springs.</li>
-						<li>I currently reside at the Gazette, a local newspaper, building out whatever exciting new projects they bring</li>
+						<li>
+						I studied Environmental Science and GIS at UCCS. In my last few semesters, I realized I wanted to code. I took 3 semesters of programming courses and through my journey, I decided web development was my favorite.
+						</li>
+						<li>
+						After I graduated, I began to teach myself some basics about front end development to get a feel for how it really worked. I realized at this rate though, the evolution of the market was outpacing my learning speed.
+						</li>
+						<li>
+						I decided I needed to look into some programming courses and came across a variety of technical schools in the Denver area dedicated to web development. After looking into a couple different school choices, I decided to get involved with a school called RefactorU and took my first step into becoming a web developer.
+						</li>
+						<li>
+						Once I graduated from RefactorU, I freelanced for a year, picking up random gigs and tutoring. A more stable source of income presented itself, and I joined small company down in Colorado Springs. Through this, I gained some professional experience in a cozy environment.
+						</li>
+						<li>
+						I currently reside at the Colorado Springs Gazette as a Junior Developer. The environment is fast pace and has given me multiple opportunities to learn valuable skills, such as cross browser usability, deploying sites and project management.
+						</li>
 					</ul>
 				</div>
 				<div id="end-of-history">					
@@ -84,8 +92,15 @@
 			<div class='info-sections'>				
 					<h3>Being a part of the coding community is very important to me, so I try to get involved in as many events as I can.</h3>
 					<ul class="coding-events-list">
-						<li><img class="coding-events-images" src="../photos/coding_events/DvlpDnvr.jpg"><p>Develop Denver.</p></li> 
-						<li><img class="coding-events-images" src="../photos/coding_events/global_game_jam.jpg"><p>Global Game Jam <a href="https://github.com/BrentLeasure/wave-escape">Check out the repository!</a></p></li>
+						<li> 
+							<a href="https://developdenver.org/" target="_blank"><img class="coding-events-images" src="../photos/coding_events/DvlpDnvr.jpg"></a>
+						</li> 
+						<li>
+							<a href="http://globalgamejam.org/" target="_blank"><img class="coding-events-images" src="../photos/coding_events/global_game_jam.jpg"></a>
+						</li>
+						<li>
+							<a href="http://gocode.colorado.gov/" target="_blank"><img class="coding-events-images" src="../photos/coding_events/GoCode.jpg"></a>
+						</li>
 					</ul>
 				
 			</div>
@@ -94,39 +109,49 @@
 					<h3>My hobbies include:</h3>
 					<div class="activities-container">
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/cosplay.png" class="activity-images activity-image-first">
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/cosplay.png">
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
-									While it's a new hobby, I love the cosplay community. I had the pleasure of attending Denver Comic Con last year as a War Boy. I even got in to see Stan Lee talk about building Marvel and creating iconic characters such as Spiderman and Iron Man.
+									It's a new hobby, I love the cosplay community. Last year, I had the pleasure of attending Denver Comic Con as a War Boy. I even got in to see Stan Lee discuss building the Marvel empire and creating iconic characters such as Spiderman and Iron Man.
 								</p>
 							</div>
 						</div>
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/climbing.jpg" class="activity-images activity-image-first">
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/climbing.jpg">
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
-									Climbing takes up most of my time. I love to get outside and explore new climbing walls. Here's the kicker though; I'm terrified of heights! But the way I see it, life is about getting out of your comfort zone. Climbing forces me to push myself to test my boundaries and keeps me active.
+									Climbing takes up most of my time. I love to get outside and explore new places of climbing. Although I am terrified of heights, the way I see it, life is about getting out of your comfort zone. Climbing forces me to push myself to test my boundaries and keeps me active.
 								</p>
 							</div>						
 						</div>
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/skiing.png" class="activity-images activity-image-first">
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/skiing.png">
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
-									I have been blessed with the opportunity to be skiing since I could walk. Every year I enjoy hitting the slopes and taking advantage of the incredible winters we have in our square state.
+									I have been blessed with the means to be have been skiing since I could walk. Every year I enjoy hitting the slopes and taking advantage of the incredible winters we have in our square state.
 								</p>
 							</div>	
 						</div>
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/water_sports.png" class="activity-images activity-image-first">						
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/water_sports.png">						
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
-									When I can't ski on snow, I ski on water. Every summer, my friends have a piece of land on a lake and a boat. When you mix them together, it makes for a lot of fantastic adventures. While I'm the runt of this group, I still have a great time.
+									When I can't ski on snow, I ski on water. My friends have a piece of land on a lake, a boat and beer. When you mix them together, it makes for a lot of fantastic adventures during the summer. I maybe the runt of this group, but I can still hold my own on a slalom course... sometimes.
 								</p>
 							</div>
 						</div>
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/coder.jpg" class="activity-images activity-image-first">							
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/coder.jpg">							
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
 									The obvious one! If I'm not outside, I enjoy coding. I try hard to work on my own projects, but I also get involved with community events and talks. I've attended Develop Denver, Go Code Colorado Springs and Global Game Jam so far. I look forward to the many more to come.
@@ -134,10 +159,12 @@
 							</div>
 						</div>
 						<div class="activity-image-container">
-							<img src="../photos/hobbies/hiking.png" class="activity-images activity-image-first">
+							<div class="activity-images activity-image-first">
+								<img src="../photos/hobbies/hiking.png">
+							</div>
 							<div class="activity-images activity-image-second">
 								<p>
-									Hiking through Colorado has been exhilerating and visually stimulating. There is never a dull sight when exploring our backyard. My most difficult climb to date was Capitol Peak, but I hope for it to be one of many class 4 climbs I will accomplish.
+									Hiking through Colorado has been exhilerating and visually stimulating. There is never a dull sight when exploring our backyard. My most difficult climb to date was Capitol Peak, but I hope for it to be only one of many class 4 climbs I will accomplish.
 								</p>
 							</div>														
 						</div>
