@@ -89,11 +89,26 @@ ul {
 	#pageTwo{
 		width: 100%;
 
-		#page-two-section{ 
+		.skill-container {
+			width: 200px;
+    		height: 200px;
+   			overflow: hidden;
+    		border: 1px solid white;
+
+
+    		&:hover {
+    			
+    		}
+		}
+
+
+
+		#page-two-skill-container{ 
 			@include flexBox();
 			@include flexDirection();
 			@include flexWrap(wrap);
 			@include justifyContent(center); 
+
 		
 
 			.skillbox{
