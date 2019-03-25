@@ -6,8 +6,8 @@ var uglify = require( 'gulp-uglify' );
 var uglifycss = require( 'gulp-uglifycss' );
 var nodemon = require( 'gulp-nodemon' );
 
-gulp.task('default', ['sass', 'babel', 'nodemon'], function(){
-	gulp.watch('./public/scss/*.scss', ['sass']);
+gulp.task('default', ['css', 'babel', 'nodemon'], function(){
+	gulp.watch('./public/css/*.css', ['css']);
 	gulp.watch('./public/js/*.js', ['babel']);
 });
 
@@ -16,10 +16,9 @@ gulp.task('nodemon', function () {
           , ext: 'html js scss'})
 })
 
-gulp.task('sass', function(){
-	return gulp.src(['./public/scss/*.scss', './public/scss/directives/*.scss'])
-		.pipe(sass().on('error', sass.logError))
-		.pipe(concat('bundle.css'))
+gulp.task('css', function(){
+	return gulp.src('./public/css/*.css')
+		.pipe(concat('main.css'))
 		.pipe(uglifycss({
 			"uglyComments": true,
 		}))
