@@ -18,7 +18,7 @@ gulp.task('nodemon', function () {
 
 gulp.task('css', function(){
 	return gulp.src('./public/css/*.css')
-		.pipe(concat('main.css'))
+		.pipe(concat('bundle.css'))
 		.pipe(uglifycss({
 			"uglyComments": true,
 		}))

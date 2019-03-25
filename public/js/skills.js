@@ -18,7 +18,7 @@ window.onload = function() {
  
 function pulseLoop() {
 
-	addAnimation( 'skillBox', randomNumArray[i], 'pulse 1.5s', 'alternate' );
+	bl.addAnimation( 'skillBox', randomNumArray[i], 'pulse 1.5s', 'alternate' );
 		
 	i++;
 	
@@ -26,7 +26,7 @@ function pulseLoop() {
 		i = 0;
 		j = 0;
 		for ( let k = 0; k < skillsLength; k++ ) {
-			removeAllStyles( 'skillBox', randomNumArray[k] );
+			bl.removeAllStyles( 'skillBox', randomNumArray[k] );
 		}
 
 		
@@ -44,7 +44,7 @@ function pulseLoop() {
 function removePulse() {
 	
 	if( j >= 1 ) {
-		removeAllStyles( 'skillBox', randomNumArray[j - 1] );
+		bl.removeAllStyles( 'skillBox', randomNumArray[j - 1] );
 	}
 
 	j++;

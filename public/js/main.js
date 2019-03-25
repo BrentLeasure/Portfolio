@@ -12,7 +12,7 @@ function resetButtonLocation() {
 		document.getElementById('skills').style.top = '0px';
 		document.getElementById('projects').style.top = '70px';
 	
-		toCircle();
+		bl.toCircle();
 
 	} else {
 		//if the window is SMALLER than 751px, this will fire
@@ -20,7 +20,7 @@ function resetButtonLocation() {
 		document.getElementById('skills').style.top = '-70px';
 		document.getElementById('projects').style.top = '-120px';
 
-		toCircle();
+		bl.toCircle();
 	}	
 	previousButtonID = 'home';
 	
@@ -30,7 +30,7 @@ function resetButtonLocation() {
 window.onresize = function( event ) {
 	
 	//if window resizes, this will run
-	changeButtonLocation(true);
+	bl.changeButtonLocation(true);
 	
 };
 
@@ -56,7 +56,7 @@ function NavbarClick( id, idNum ) {
 	}
 
 	//changes the buttons location
-	changeButtonLocation(false);
+	bl.changeButtonLocation(false);
 
 	//previous button is set to the button that was clicked
 	previousButtonID = id;

@@ -492,7 +492,7 @@ ul {
     justify-content: center
 }
 
-#content #pageTwo #page-two-section .skillbox {
+.skillbox {
     height: 150px;
     width: 150px;
     transition: border-radius .5s;
@@ -505,13 +505,13 @@ ul {
 }
 
 @media all and (max-width:970px) {
-    #content #pageTwo #page-two-section .skillbox {
+    .skillbox {
         margin: 1% 3.5% 1%
     }
 }
 
 @media all and (max-width:750px) {
-    #content #pageTwo #page-two-section .skillbox {
+    .skillbox {
         height: 100px;
         width: 100px;
         margin: 1% 2% 1%
