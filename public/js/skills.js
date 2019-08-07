@@ -21,7 +21,7 @@ function pulseLoop() {
 	bl.addAnimation( 'skillBox', randomNumArray[i], 'pulse 1.5s', 'alternate' );
 		
 	i++;
-	
+	//test
 	if( i >= skillsLength ) {
 		i = 0;
 		j = 0;
