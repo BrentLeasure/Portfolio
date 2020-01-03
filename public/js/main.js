@@ -1,10 +1,10 @@
-var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#90c53f'];
+var previousPageID = "pageOne", previousButtonID = "home", colors = ['#1072b8', '#e44d26', '#82329F'];
  
 function resetButtonLocation() {
 	
 	//if the home button is clicked, then this will fire 
 	//and reset all the buttons background colors to black
-	document.getElementById( previousButtonID ).style.backgroundColor = "black";
+	document.getElementById( previousButtonID ).style.backgroundColor = "transparent";
 
 	if ( window.innerWidth > 751 ) {
 		//if the window is BIGGER than 751px, this will fire
@@ -50,7 +50,7 @@ function NavbarClick( id, idNum ) {
 		document.getElementById(previousButtonID).classList.remove("active-button");
 		document.getElementById(id).classList.add("active-button");
 
-		document.getElementById(previousButtonID).style.backgroundColor = "black";
+		document.getElementById(previousButtonID).style.backgroundColor = "transparent";
 		document.getElementById(id).style.backgroundColor = colors[idNum];
 		
 	}

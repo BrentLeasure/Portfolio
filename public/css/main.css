@@ -7,9 +7,26 @@
     margin: 0
 }
 
+.project-buttons {
+    background-color: transparent;
+    color: #c9c5be;
+    border: 2px solid #c9c5be;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 25px;
+    transition: background-color .5s, color .5s;
+    -moz-transition: background-color .5s, color .5s;
+    -webkit-transition: background-color .5s, color .5s;
+}
+
+.project-buttons:hover {
+    color: #1c1e21;
+    background-color: #c9c5be; 
+}
+
 .circle-buttons,
 #navigation .nav-buttons {
-    border: 5px solid white;
+    border: 5px solid #c9c5be;
     border-radius: 100%;
     text-align: center
 }
@@ -18,7 +35,7 @@
 #navigation #home-button,
 #content #pageFour .info-section-buttons {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #c9c5be;
     border-radius: 5px
 }
 
@@ -39,9 +56,16 @@
     margin: 0
 }
 
+#languages-container, #frameworks-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  flex-wrap: wrap; 
+}
+
 .circle-buttons,
 #navigation .nav-buttons {
-    border: 5px solid white;
+    border: 5px solid #c9c5be;
     border-radius: 100%;
     text-align: center
 }
@@ -50,7 +74,7 @@
 #navigation #home-button,
 #content #pageFour .info-section-buttons {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #c9c5be;
     border-radius: 5px
 }
 
@@ -79,13 +103,13 @@
     top: 100px;
     left: 215px;
     visibility: hidden;
-    background-color: black;
-    color: white
+    background-color: #1c1e21;
+    color: #c9c5be
 }
 
 #navigation #home-button:hover {
-    background-color: white;
-    color: black
+    background-color: #e3dccf;
+    color: #1c1e21
 }
 
 @media screen and (max-width:750px) {
@@ -104,13 +128,13 @@
     -webkit-transition: color .5s;
     height: 125px;
     width: 125px;
-    background-color: black;
-    color: white;
-    position: relative
+    background-color: #1c1e21;
+    color: #c9c5be;
+    position: relative;
 }
 
 #navigation .nav-buttons:hover {
-    color: black
+    color: #1c1e21;
 }
 
 @media screen and (max-width:750px) {
@@ -167,7 +191,7 @@
 }
 
 #navigation #projects:hover {
-    background-color: #90c53f !important
+    background-color: #82329F !important
 }
 
 @media screen and (max-width:750px) {
@@ -185,21 +209,21 @@
 }
 
 .active-button li {
-    color: black
+    color: #1c1e21;
 }
 
 .generalLi {
-    list-style: none
+    list-style: none;
 }
 
 .generalUl {
     padding: 0;
-    margin: 0
+    margin: 0;
 }
 
 .circle-buttons,
 #navigation .nav-buttons {
-    border: 5px solid white;
+    border: 5px solid #c9c5be;
     border-radius: 100%;
     text-align: center
 }
@@ -208,7 +232,7 @@
 #navigation #home-button,
 #content #pageFour .info-section-buttons {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #c9c5be;
     border-radius: 5px
 }
 
@@ -227,7 +251,7 @@
 .info-sections .history-line {
     position: absolute;
     width: 50%;
-    border-right: 1px dashed white;
+    border-right: 1px dashed #c9c5be;
     height: 100%
 }
 
@@ -306,7 +330,7 @@
     height: 100%;
     -webkit-transition: .6s ease-in-out;
     transition: .6s ease-in-out;
-    background: black;
+    background: #1c1e21;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
@@ -323,31 +347,31 @@
 }
 
 .info-sections .activities-container .activity-image-container .activity-image-first {
-    -webkit-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0)
+    -webkit-opacity: 100;
+    -moz-opacity: 100;
+    -o-opacity: 100;
+    opacity: 100;
 }
 
 .info-sections .activities-container .activity-image-container .activity-image-second {
-    -webkit-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg)
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
 }
 
 .info-sections .activities-container .activity-image-container:hover .activity-image-first {
-    -webkit-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg)
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -o-opacity: 0;
+    opacity: 0;
 }
 
 .info-sections .activities-container .activity-image-container:hover .activity-image-second {
-    -webkit-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
+    -webkit-opacity: 100;
+    -moz-opacity: 100;
+    -o-opacity: 100;
+    opacity: 100;
     z-index: 1
 }
 
@@ -381,14 +405,14 @@
 }
 
 .active-page-button {
-    background: white !important;
-    color: black !important
+    background: #c9c5be !important;
+    color: #1c1e21 !important
 }
 
 .profile-pic {
     height: 200px;
     width: 200px;
-    border: black solid px;
+    border: #1c1e21 solid px;
     border-radius: 100%;
     margin: 0 auto;
     display: block;
@@ -396,8 +420,8 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #1c1e21;
+    color: #c9c5be;
     margin: 0;
     padding: 0
 }
@@ -431,7 +455,7 @@ ul {
     margin: 0 auto;
     height: 300px;
     width: 300px;
-    border: 5px solid white;
+    border: 5px solid #c9c5be;
     border-radius: 100%
 }
 
@@ -498,9 +522,7 @@ ul {
     transition: border-radius .5s;
     -moz-transition: border-radius .5s;
     -webkit-transition: border-radius .5s;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    border: 5px solid black;
+    border: 5px solid #1c1e21;
     margin: 1% 6.5% 1%
 }
 
@@ -530,14 +552,14 @@ ul {
     float: left;
     width: 31%;
     margin: 0 1% 0;
-    background: black;
-    color: white;
+    background: #1c1e21;
+    color: #c9c5be;
     z-index: 100
 }
 
 #content #pageFour .info-section-buttons:hover {
-    background: white;
-    color: black
+    background: #e3dccf;
+    color: #1c1e21
 }
 
 @media screen and (max-width:750px) {
@@ -556,7 +578,8 @@ ul {
 #content #pageFour .info-sections {
     z-index: 9;
     position: relative;
-    clear: both
+    clear: both;
+    padding-top: 20px;
 }
 
 .generalLi {
@@ -569,14 +592,14 @@ ul {
 }
 
 .circle-buttons {
-    border: 5px solid white;
+    border: 5px solid #c9c5be;
     border-radius: 100%;
     text-align: center
 }
 
 .buttons {
     text-align: center;
-    border: 1px solid white;
+    border: 1px solid #c9c5be;
     border-radius: 5px
 }
 
