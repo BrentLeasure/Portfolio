@@ -589,7 +589,7 @@ ul {
     animation: RightToLeft 1s;
 }
 
-@media screen and (max-width:750px) {
+@media all and (max-width:750px) {
     #navigation .nav-buttons {
         height: 100px;
         width: 100px;
