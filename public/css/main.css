@@ -679,8 +679,8 @@ ul {
     .outer-skill-container {
         width: 300px;
         width: 90%;
-        height: 100px;
-        height: 20%;
+        max-height: 250px;
+        max-height: 50%;
     }
 }
 
