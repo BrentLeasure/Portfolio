@@ -311,7 +311,7 @@
     list-style: none;
 }
 
-.info-sections .conding-events-list li div {
+.info-sections .conding-events-list .event-box {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
