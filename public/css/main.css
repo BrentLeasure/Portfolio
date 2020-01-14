@@ -671,6 +671,13 @@ ul {
         width: 250px;
         width: 60%;
     }
+
+    .outer-skill-container {
+        width: 300px;
+        width: 90%;
+        height: 250px;
+        height: 80%;
+    }
 }
 
 @keyframes fadeIn {
