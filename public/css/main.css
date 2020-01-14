@@ -308,6 +308,10 @@
 }
 
 .info-sections .coding-events-list li {
+    list-style: none;
+}
+
+.info-sections .conding-events-list li div {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -317,7 +321,6 @@
     align-content: center;
     -webkit-justify-content: center;
     justify-content: center;
-    list-style: none;
 }
 
 .info-sections .coding-events-list .coding-events-images {
