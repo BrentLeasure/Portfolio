@@ -4,7 +4,6 @@ historyListItems = historyElements.getElementsByTagName('li'), endOfHistory = do
 window.addEventListener( 'scroll', function(e) { 
 	EnterHistoryElements();
 
-
 });
 
 
