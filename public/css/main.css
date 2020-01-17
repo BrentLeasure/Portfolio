@@ -249,6 +249,9 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    flex-direction: column;
     -webkit-align-content: center;
     align-content: center;
     width: 15%;
@@ -543,6 +546,8 @@ ul {
     flex-direction: row;
     -webkit-justify-content: center;
     justify-content: center;
+    height: 200px;
+    padding: 20px;
 }
 
 .skillbox {
@@ -551,8 +556,7 @@ ul {
     -webkit-transition: border-radius .5s;
     width: 80px;
     width: 20%;
-    height: 50px;
-    height: 25%;
+    height: 45%; 
     margin: 1% 6.5% 1%;
 }
 
